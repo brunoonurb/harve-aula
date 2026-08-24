@@ -13,11 +13,13 @@ import {
   Slide,
   TextBody,
   codeBlockFor,
+  downloadsOf,
   fontSpec,
   isLightColor,
   placeholderSegments,
 } from '@/lib/deck'
 import CodeBlockControls from '@/components/CodeBlockControls'
+import SlideDownloads from '@/components/SlideDownloads'
 
 /* ------------------------------------------------------------------ *
  * Renderiza um slide no palco fixo de 960x540 px, com cada shape
@@ -38,6 +40,7 @@ type Props = {
 type Segments = Map<string, { t: string; ph: boolean }[]>
 
 export default function SlideView({ slide, interactive = false, highlight = true, onExpand }: Props) {
+  const downloads = downloadsOf(slide.n)
   return (
     <div className="slide-root" style={{ width: SLIDE_W, height: SLIDE_H }}>
       {slide.els.map((el, i) => (
@@ -50,6 +53,7 @@ export default function SlideView({ slide, interactive = false, highlight = true
           onExpand={onExpand}
         />
       ))}
+      {downloads && interactive && <SlideDownloads group={downloads} />}
     </div>
   )
 }

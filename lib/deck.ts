@@ -322,3 +322,49 @@ export function isLightColor(color: string | undefined): boolean {
 }
 
 export const slideTitles = slides.map((s) => slideTitle(s))
+
+/* ------------------------------------------------------------------ *
+ * Downloads da oficina
+ * ------------------------------------------------------------------ */
+
+export type SlideDownload = {
+  /** arquivo em public/ */
+  href: string
+  label: string
+  title: string
+  /** botao principal (laranja) ou secundario (contorno) */
+  primary?: boolean
+}
+
+export type SlideDownloadGroup = { box: Box; items: SlideDownload[] }
+
+/**
+ * O PPTX nao tem hiperlinks nos cartoes; o slide 15 so diz "Baixe o CSV
+ * modelo da Harve". Aqui o texto vira botao de verdade, ancorado no canto
+ * superior direito do cartao da planilha-modelo (shape 310), ao lado do
+ * titulo "📊 Usando a Planilha-Modelo". As medidas estao no palco 960x540,
+ * como o resto do deck. Fica fora do deck.json de proposito: aquele arquivo
+ * e gerado por scripts/extract-pptx.py e seria sobrescrito.
+ */
+export const slideDownloads: Record<number, SlideDownloadGroup> = {
+  15: {
+    box: { x: 300, y: 258.5, w: 160, h: 26 },
+    items: [
+      {
+        href: '/clientes-modelo.csv',
+        label: 'Baixar CSV',
+        title: 'Baixar clientes-modelo.csv — cabecalho + 30 linhas de exemplo',
+        primary: true,
+      },
+      {
+        href: '/clientes-modelo.xlsx',
+        label: 'XLSX',
+        title: 'Baixar clientes-modelo.xlsx — a mesma base para abrir no Excel ou Google Sheets',
+      },
+    ],
+  },
+}
+
+export function downloadsOf(slideN: number): SlideDownloadGroup | undefined {
+  return slideDownloads[slideN]
+}

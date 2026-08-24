@@ -811,3 +811,49 @@ mark.ph-lg {
     font-size: 11.5px;
   }
 }
+
+/* Botoes de download ancorados no slide (ver lib/deck.ts: slideDownloads) */
+.dl-group {
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.dl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 9px;
+  border: 1px solid var(--brand);
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--brand);
+  font-family: var(--font-nunito), sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 140ms ease, color 140ms ease, box-shadow 140ms ease;
+}
+
+.dl-btn:hover,
+.dl-btn:focus-visible {
+  background: var(--brand);
+  color: #fff;
+  box-shadow: 0 1px 4px rgba(255, 64, 0, 0.3);
+}
+
+.dl-btn-primary {
+  background: var(--brand);
+  color: #fff;
+}
+
+.dl-btn-primary:hover,
+.dl-btn-primary:focus-visible {
+  background: #d93600;
+  border-color: #d93600;
+  color: #fff;
+}

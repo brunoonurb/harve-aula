@@ -1,0 +1,31 @@
+nome,telefone,email,cidade,status,observacoes
+Ana Beatriz Correia,(11) 98432-1176,ana.correia@exemplo.com.br,Sao Paulo,ativo,Cliente desde 2021 - prefere contato por e-mail
+Bruno Tavares Lima,(21) 99145-3320,bruno.lima@exemplo.com.br,Rio de Janeiro,ativo,Indicado por Ana Beatriz
+Carla Nogueira,(31) 98877-2043,carla.nogueira@exemplo.com.br,Belo Horizonte,inativo,Contrato encerrado em marco
+Daniel Figueiredo,(41) 99620-8814,daniel.figueiredo@exemplo.com.br,Curitiba,ativo,Renovacao prevista para dezembro
+Eduarda Prado,(51) 98301-4477,eduarda.prado@exemplo.com.br,Porto Alegre,ativo,Atendimento quinzenal
+Fabio Rocha Menezes,(61) 99733-1092,fabio.menezes@exemplo.com.br,Brasilia,inativo,Sem retorno nos ultimos contatos
+Gabriela Santoro,(71) 98122-6650,gabriela.santoro@exemplo.com.br,Salvador,ativo,Pedido recorrente no inicio do mes
+Henrique Alves Barreto,(81) 99408-7731,henrique.barreto@exemplo.com.br,Recife,ativo,Solicitou nota fiscal por e-mail
+Isabela Moraes,(85) 98655-2214,isabela.moraes@exemplo.com.br,Fortaleza,ativo,Primeiro pedido em janeiro
+Joao Pedro Vasconcelos,(48) 99287-3345,joao.vasconcelos@exemplo.com.br,Florianopolis,inativo,Mudou de fornecedor
+Karina Dutra,(11) 98790-5566,karina.dutra@exemplo.com.br,Campinas,ativo,Prefere contato pela manha
+Leonardo Bastos,(19) 99514-8823,leonardo.bastos@exemplo.com.br,Ribeirao Preto,ativo,Negociacao de plano anual em andamento
+Mariana Feitosa,(62) 98366-4419,mariana.feitosa@exemplo.com.br,Goiania,ativo,Cadastro atualizado em maio
+Nelson Ribeiro Junior,(27) 99711-2208,nelson.ribeiro@exemplo.com.br,Vitoria,inativo,Aguardando retorno da diretoria
+Olivia Camargo,(92) 98233-9074,olivia.camargo@exemplo.com.br,Manaus,ativo,Entrega agendada toda sexta
+Paulo Cesar Amorim,(65) 99188-6631,paulo.amorim@exemplo.com.br,Cuiaba,ativo,Compra em grande volume
+Quezia Martins,(84) 98499-1120,quezia.martins@exemplo.com.br,Natal,ativo,Contato preferencial por WhatsApp
+Rafael Siqueira Prado,(11) 99055-7742,rafael.prado@exemplo.com.br,Santo Andre,inativo,Cadastro duplicado - verificar
+Sabrina Toledo,(41) 98644-3317,sabrina.toledo@exemplo.com.br,Londrina,ativo,Pagamento sempre em dia
+Thiago Bittencourt,(51) 99377-8850,thiago.bittencourt@exemplo.com.br,Caxias do Sul,ativo,Pediu orcamento para nova filial
+Ursula Cavalcanti,(81) 98211-4463,ursula.cavalcanti@exemplo.com.br,Olinda,ativo,Cliente corporativo
+Vinicius Andrade Lopes,(31) 99866-2295,vinicius.lopes@exemplo.com.br,Uberlandia,inativo,Suspendeu o contrato temporariamente
+Wanessa Guimaraes,(21) 98533-7708,wanessa.guimaraes@exemplo.com.br,Niteroi,ativo,Solicita relatorio mensal
+Yuri Nakamura,(11) 99622-1183,yuri.nakamura@exemplo.com.br,Sao Bernardo do Campo,ativo,Fala tambem por telefone fixo
+Zilda Ferraz,(71) 98177-5529,zilda.ferraz@exemplo.com.br,Feira de Santana,ativo,Cliente antigo - revisar cadastro
+Adriano Peixoto,(47) 99433-6674,adriano.peixoto@exemplo.com.br,Joinville,inativo,Solicitou cancelamento em abril
+Beatriz Salgado,(11) 98944-2231,beatriz.salgado@exemplo.com.br,Guarulhos,ativo,Novo contato do setor de compras
+Caio Monteiro Reis,(62) 99255-8817,caio.reis@exemplo.com.br,Anapolis,ativo,Visita comercial agendada
+Denise Vilela,(85) 98722-3346,denise.vilela@exemplo.com.br,Sobral,ativo,Prefere boleto bancario
+Everton Machado,(51) 99811-4402,everton.machado@exemplo.com.br,Pelotas,inativo,Contato desatualizado
