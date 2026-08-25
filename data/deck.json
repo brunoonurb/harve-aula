@@ -7539,46 +7539,59 @@
         "lh": 1.33,
         "runs": [
          {
-          "t": "No painel do Supabase: ",
+          "t": "Na barra superior do projeto, clique no botão verde ",
           "sz": 9.5,
           "c": "#000000",
           "f": "Nunito Light"
          },
          {
-          "t": "Settings → API",
+          "t": "Connect",
           "b": true,
           "sz": 9.5,
           "c": "#000000",
           "f": "Nunito"
          },
          {
-          "t": ". Copie o ",
+          "t": ". No modal, aba ",
           "sz": 9.5,
           "c": "#000000",
           "f": "Nunito Light"
          },
          {
-          "t": "Project URL",
+          "t": "Framework",
           "b": true,
           "sz": 9.5,
           "c": "#000000",
           "f": "Nunito"
          },
          {
-          "t": " e a chave ",
+          "t": " → Next.js / App Router. O tópico ",
           "sz": 9.5,
           "c": "#000000",
           "f": "Nunito Light"
          },
          {
-          "t": "anon public",
+          "t": "2 · Add files",
           "b": true,
           "sz": 9.5,
           "c": "#000000",
           "f": "Nunito"
          },
          {
-          "t": ".",
+          "t": ", na aba ",
+          "sz": 9.5,
+          "c": "#000000",
+          "f": "Nunito Light"
+         },
+         {
+          "t": ".env.local",
+          "sz": 9.5,
+          "c": "#000000",
+          "hl": "#F2F2F2",
+          "f": "Consolas"
+         },
+         {
+          "t": ", mostra a URL e a chave do projeto.",
           "sz": 9.5,
           "c": "#000000",
           "f": "Nunito Light"
@@ -7594,6 +7607,17 @@
       "wrap": "square"
      },
      "id": "395"
+    },
+    {
+     "kind": "image",
+     "box": {
+      "x": 94.4,
+      "y": 356.0,
+      "w": 232.09,
+      "h": 26.88
+     },
+     "radius": 4.0,
+     "src": "supabase-connect.png"
     },
     {
      "kind": "shape",
@@ -7947,7 +7971,7 @@
       "x": 52.09,
       "y": 431.89,
       "w": 855.84,
-      "h": 52.57
+      "h": 64.0
      },
      "geom": "roundRect",
      "fill": "#FFB3B4",
@@ -7958,7 +7982,7 @@
      "kind": "image",
      "box": {
       "x": 65.1,
-      "y": 450.77,
+      "y": 447.0,
       "w": 16.27,
       "h": 13.02
      },
@@ -7968,9 +7992,9 @@
      "kind": "shape",
      "box": {
       "x": 94.39,
-      "y": 448.16,
+      "y": 443.0,
       "w": 848.5,
-      "h": 21.32
+      "h": 42.0
      },
      "geom": "rect",
      "text": {
@@ -7980,33 +8004,59 @@
         "lh": 1.33,
         "runs": [
          {
-          "t": "Use ",
+          "t": "No modal a chave vem como ",
           "sz": 9.5,
           "c": "#000000",
           "f": "Nunito Light"
          },
          {
-          "t": "somente",
-          "b": true,
-          "sz": 9.5,
-          "c": "#000000",
-          "f": "Nunito"
-         },
-         {
-          "t": " a chave ",
-          "sz": 9.5,
-          "c": "#000000",
-          "f": "Nunito Light"
-         },
-         {
-          "t": "anon public",
+          "t": "NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY",
           "sz": 9.5,
           "c": "#000000",
           "hl": "#F2F2F2",
           "f": "Consolas"
          },
          {
-          "t": ". Nunca use a ",
+          "t": " (",
+          "sz": 9.5,
+          "c": "#000000",
+          "f": "Nunito Light"
+         },
+         {
+          "t": "sb_publishable_…",
+          "sz": 9.5,
+          "c": "#000000",
+          "hl": "#F2F2F2",
+          "f": "Consolas"
+         },
+         {
+          "t": "): é a mesma chave pública — cole o valor em ",
+          "sz": 9.5,
+          "c": "#000000",
+          "f": "Nunito Light"
+         },
+         {
+          "t": "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+          "sz": 9.5,
+          "c": "#000000",
+          "hl": "#F2F2F2",
+          "f": "Consolas"
+         },
+         {
+          "t": ", o nome que o projeto usa. Nunca use a chave secreta (",
+          "sz": 9.5,
+          "c": "#000000",
+          "f": "Nunito Light"
+         },
+         {
+          "t": "sb_secret_…",
+          "sz": 9.5,
+          "c": "#000000",
+          "hl": "#F2F2F2",
+          "f": "Consolas"
+         },
+         {
+          "t": " ou ",
           "sz": 9.5,
           "c": "#000000",
           "f": "Nunito Light"
@@ -8019,7 +8069,7 @@
           "f": "Consolas"
          },
          {
-          "t": " no front-end — ela bypassa toda a segurança do banco.",
+          "t": ") no front-end.",
           "sz": 9.5,
           "c": "#000000",
           "f": "Nunito Light"
@@ -8715,7 +8765,7 @@
         "lh": 1.33,
         "runs": [
          {
-          "t": "COMPLETO de components/【ClienteForm】.tsx,",
+          "t": "COMPLETO de components/【ClienteForm】.tsx —",
           "sz": 8.5,
           "c": "#E6EDF3",
           "f": "Consolas"
@@ -8727,7 +8777,7 @@
         "lh": 1.33,
         "runs": [
          {
-          "t": "um client component com um formulário",
+          "t": "um client component chamado 【ClienteForm】",
           "sz": 8.5,
           "c": "#E6EDF3",
           "f": "Consolas"
@@ -8739,7 +8789,7 @@
         "lh": 1.33,
         "runs": [
          {
-          "t": "para cadastrar um registro.",
+          "t": "com um formulário para cadastrar um registro.",
           "sz": 8.5,
           "c": "#E6EDF3",
           "f": "Consolas"
@@ -9050,7 +9100,7 @@
       "x": 494.4,
       "y": 428.93,
       "w": 414.02,
-      "h": 35.18
+      "h": 51.0
      },
      "geom": "rect",
      "text": {
@@ -9073,7 +9123,33 @@
           "f": "Consolas"
          },
          {
-          "t": " se não existir. Crie o arquivo ",
+          "t": " na raiz do projeto (ao lado de ",
+          "sz": 8.5,
+          "c": "#000000",
+          "f": "Nunito Light"
+         },
+         {
+          "t": "app/",
+          "sz": 8.5,
+          "c": "#000000",
+          "hl": "#F2F2F2",
+          "f": "Consolas"
+         },
+         {
+          "t": " e ",
+          "sz": 8.5,
+          "c": "#000000",
+          "f": "Nunito Light"
+         },
+         {
+          "t": "lib/",
+          "sz": 8.5,
+          "c": "#000000",
+          "hl": "#F2F2F2",
+          "f": "Consolas"
+         },
+         {
+          "t": "), se não existir. Crie o arquivo ",
           "sz": 8.5,
           "c": "#000000",
           "f": "Nunito Light"
