@@ -10214,7 +10214,7 @@
         "lh": 1.04,
         "runs": [
          {
-          "t": "Dicas para o Facilitador",
+          "t": "Dicas para o Facilitador e o Aluno",
           "b": true,
           "sz": 24.0,
           "c": "#FF4000",
@@ -10326,7 +10326,7 @@
         "lh": 1.33,
         "runs": [
          {
-          "t": "Oriente o aluno a copiar a mensagem de erro completa e colar no chat de IA pedindo a correção — sempre mantendo o pedido de \"arquivo completo, pronto para colar\".",
+          "t": "Copie a mensagem de erro completa e cole no chat de IA pedindo a correção — sempre mantendo o pedido de \"arquivo completo, pronto para colar\".",
           "sz": 9.5,
           "c": "#000000",
           "f": "Nunito Light"
@@ -10437,7 +10437,7 @@
         "lh": 1.33,
         "runs": [
          {
-          "t": "Reforce salvar o arquivo após cada colagem. O ",
+          "t": "Salve o arquivo após cada colagem. O ",
           "sz": 9.5,
           "c": "#000000",
           "f": "Nunito Light"
@@ -10561,7 +10561,7 @@
         "lh": 1.33,
         "runs": [
          {
-          "t": "Ajude o aluno a identificar quais partes dos prompts mudam. Nos Passos 4 a 7, os nomes de coluna e da tabela são os únicos trechos que precisam de substituição.",
+          "t": "Identifique quais partes dos prompts mudam. Nos Passos 4 a 7, os nomes de coluna e da tabela são os únicos trechos que precisam de substituição.",
           "sz": 9.5,
           "c": "#000000",
           "f": "Nunito Light"
