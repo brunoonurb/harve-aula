@@ -1,6 +1,6 @@
 'use client'
 
-import { SLIDE_H, SLIDE_W, Slide } from '@/lib/deck'
+import { SLIDE_H, SLIDE_W, Slide } from '@/lib/deck-core'
 import SlideView from '@/components/SlideView'
 
 /** Miniatura real do slide (nao e imagem: e o mesmo HTML em escala menor). */

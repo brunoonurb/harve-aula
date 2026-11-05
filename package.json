@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "extract": "python3 scripts/extract-pptx.py \"../Da Planilha ao Aplicativo.pptx\" data/deck.json public/media"
+    "extract": "python3 scripts/extract-pptx.py \"../Da Planilha ao Aplicativo.pptx\" data/deck.json public/media",
+    "extract:next": "python3 scripts/extract-pdf.py"
   },
   "dependencies": {
     "next": "16.3.2",

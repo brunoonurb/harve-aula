@@ -15,7 +15,7 @@ export default function NotFound() {
       }}
     >
       <h1 style={{ margin: 0, fontSize: 22 }}>Slide não encontrado</h1>
-      <p style={{ margin: 0, color: '#a0a0ad' }}>Esta apresentação tem 36 slides.</p>
+      <p style={{ margin: 0, color: '#a0a0ad' }}>Este slide não existe nesta apresentação.</p>
       <Link href="/" className="btn btn-primary">
         Voltar ao início
       </Link>

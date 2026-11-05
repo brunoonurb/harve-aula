@@ -1,7 +1,7 @@
 'use client'
 
-import { Fragment, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
-import { CodeBlock, hasPlaceholders, splitPlaceholders, stripPlaceholders } from '@/lib/deck'
+import { Fragment, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
+import { CodeBlock, hasPlaceholders, splitPlaceholders, stripPlaceholders } from '@/lib/deck-core'
 import { useCopy } from '@/lib/useCopy'
 
 /**
@@ -21,8 +21,11 @@ export default function PromptModal({
   const wrapRef = useRef<HTMLDivElement>(null)
   const [fontSize, setFontSize] = useState(18)
   const clean = hasPlaceholders(block.text)
-  const lines = block.text.split('\n')
+  const lines = useMemo(() => block.text.split('\n'), [block.text])
   const maxLen = Math.max(...lines.map((l) => l.length), 20)
+  // Prompts em linguagem natural (deck /next) trazem um paragrafo por linha:
+  // quebram na tela em vez de rolar na horizontal.
+  const wrap = block.kind === 'prompt'
 
   const fit = useCallback(() => {
     const box = wrapRef.current
@@ -30,10 +33,21 @@ export default function PromptModal({
     const w = box.clientWidth
     const h = box.clientHeight
     // monospace: cada caractere ocupa ~0.6em de largura; 1.55em por linha
+    if (wrap) {
+      // maior corpo em que o texto, quebrado em palavras (~90% das colunas uteis), cabe na altura
+      let fs = 26
+      for (; fs > 10; fs -= 0.5) {
+        const cols = Math.max(10, Math.floor((w * 0.9) / (fs * 0.6)))
+        const rows = lines.reduce((acc, l) => acc + Math.max(1, Math.ceil(l.length / cols)), 0)
+        if (rows * 1.55 * fs + fs <= h) break
+      }
+      setFontSize(fs)
+      return
+    }
     const byWidth = w / (maxLen * 0.6 + 0.6)
     const byHeight = h / (lines.length * 1.55 + 0.5)
     setFontSize(Math.max(9, Math.min(40, Math.floor(Math.min(byWidth, byHeight) * 10) / 10)))
-  }, [lines.length, maxLen])
+  }, [lines, maxLen, wrap])
 
   useLayoutEffect(() => {
     fit()
@@ -67,7 +81,7 @@ export default function PromptModal({
           </div>
           <div className="modal-actions">
             <button type="button" className="btn btn-primary" onClick={() => copy(block.text, 'raw')}>
-              {copied === 'raw' ? '✓ Copiado' : 'Copiar prompt'}
+              {copied === 'raw' ? '✓ Copiado' : block.kind === 'code' ? 'Copiar código' : 'Copiar prompt'}
             </button>
             {clean && (
               <button
@@ -86,7 +100,10 @@ export default function PromptModal({
         </header>
 
         <div className="modal-body" ref={wrapRef}>
-          <pre className="prompt-pre" style={{ fontSize, lineHeight: 1.55 }}>
+          <pre
+            className="prompt-pre"
+            style={{ fontSize, lineHeight: 1.55, whiteSpace: wrap ? 'pre-wrap' : undefined }}
+          >
             {highlight
               ? splitPlaceholders(block.text).map((part, i) => (
                   <Fragment key={i}>

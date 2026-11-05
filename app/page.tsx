@@ -1,5 +1,5 @@
-import Deck from '@/components/Deck'
+import MainDeck from '@/components/MainDeck'
 
 export default function Home() {
-  return <Deck initial={1} />
+  return <MainDeck initial={1} />
 }

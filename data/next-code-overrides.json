@@ -1,0 +1,766 @@
+{
+ "24": {
+  "b1": {
+   "kind": "prompt",
+   "text": [
+    "Sou dev iniciante e vou construir a Caderneta da Claudia, um app de controle financeiro pessoal.",
+    "Crie o esqueleto do app em Next.js com App Router e TypeScript, sem banco de dados ainda.",
+    "Telas: / (apresentacao), /lancamentos (lista) e /lancamentos/[id] (um lancamento).",
+    "A area de /lancamentos e /dashboard tem um layout proprio com menu Lancamentos e Dashboard.",
+    "Use esta lista fixa de exemplo dentro do codigo:",
+    "{ id: 1, descricao: \"mercado do mes\", valor: 341.43, tipo: \"saida\", data: \"2025-01-01\" }",
+    "{ id: 2, descricao: \"salario\", valor: 856.74, tipo: \"entrada\", data: \"2025-01-02\" }",
+    "Cada lancamento aparece num componente LancamentoCard, com props tipadas, usado com map.",
+    "Navegue entre as telas com Link e crie loading.tsx e not-found.tsx simples.",
+    "Nao use banco, nem rotas de API, nem estado de cliente, nem bibliotecas extras.",
+    "Me devolva os arquivos completos, com o caminho de cada um, prontos para npm run dev."
+   ]
+  }
+ },
+ "25": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "import { LancamentoCard } from \"@/components/lancamento-card\";",
+    "",
+    "const lancamentos = [",
+    "  { id: 1, descricao: \"mercado do mes\", valor: 341.43, tipo: \"saida\" },",
+    "  { id: 2, descricao: \"salario\", valor: 856.74, tipo: \"entrada\" },",
+    "];",
+    "",
+    "export default function LancamentosPage() {",
+    "  return <ul>{lancamentos.map((l) => <LancamentoCard key={l.id} dados={l} />)}</ul>;",
+    "}"
+   ]
+  }
+ },
+ "32": {
+  "b1": {
+   "kind": "prompt",
+   "text": [
+    "Continuando a Caderneta da Claudia, app Next.js com App Router, TypeScript e Supabase com RLS.",
+    "Hoje o app so le lancamentos; quero que a Claudia consiga lancar, editar e excluir pelo app.",
+    "Crie /lancamentos/novo com formulario de descricao, valor, tipo (entrada ou saida), data, conta e categoria, usando as contas e categorias do usuario logado.",
+    "A gravacao deve ser feita por uma Server Action num arquivo de actions, nunca por rota de API.",
+    "A action precisa conferir os dados (valor maior que zero e descricao preenchida), gravar com o user_id de quem esta logado, devolver mensagem de erro em vez de quebrar, atualizar a lista de /lancamentos e levar a Claudia de volta para ela.",
+    "No formulario, mostre a mensagem de erro na tela e desabilite o botao enquanto envia.",
+    "Crie tambem /lancamentos/[id]/editar com o formulario ja preenchido e exclusao com confirmacao.",
+    "Sem bibliotecas de validacao ou de formulario: so o que vem com o Next.",
+    "Me devolva os arquivos completos, com o caminho de cada um."
+   ]
+  }
+ },
+ "33": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "\"use server\"; // app/lancamentos/actions.ts",
+    "export async function criarLancamento(_estado: Estado, form: FormData) {",
+    "  const valor = Number(form.get(\"valor\"));",
+    "  if (!valor || valor <= 0) return { erro: \"Informe um valor maior que zero.\" };",
+    "  const db = await supabaseServer();",
+    "  const { data: { user } } = await db.auth.getUser();",
+    "  const { error } = await db.from(\"lancamentos\").insert({ user_id: user!.id,",
+    "    valor, tipo: form.get(\"tipo\"), descricao: form.get(\"descricao\") });",
+    "  if (error) return { erro: \"Nao consegui salvar. Tente de novo.\" };",
+    "  revalidatePath(\"/lancamentos\");",
+    "  redirect(\"/lancamentos\");",
+    "}"
+   ]
+  }
+ },
+ "37": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "async function criarLancamento() {",
+    "  \"use server\";",
+    "",
+    "  console.log(\"criarLancamento rodou\");",
+    "}"
+   ]
+  },
+  "b2": {
+   "skip": true
+  }
+ },
+ "38": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "<form action={criarLancamento}>",
+    "  <input name=\"descricao\" />",
+    "  <input name=\"valor\" />",
+    "  <button>Salvar</button>",
+    "</form>"
+   ]
+  }
+ },
+ "39": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "async function criarLancamento(",
+    "  form: FormData,",
+    ") {",
+    "  const descricao = form.get(\"descricao\");",
+    "  const valor = form.get(\"valor\");",
+    "}"
+   ]
+  }
+ },
+ "40": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "const db = await supabaseServer();",
+    "const { data: { user } } = await db.auth.getUser();",
+    "await db.from(\"lancamentos\").insert({",
+    "  user_id: user!.id,",
+    "  descricao: form.get(\"descricao\"),",
+    "  valor: Number(form.get(\"valor\")),",
+    "  tipo: form.get(\"tipo\"),",
+    "});"
+   ]
+  }
+ },
+ "42": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "const valor = Number(form.get(\"valor\"));",
+    "// 1. conferir o valor: a regra do caso",
+    "// 2. só então falar com o banco",
+    "await db.from(\"lancamentos\").insert({ ... });"
+   ]
+  }
+ },
+ "44": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "const { error } = await db.from(\"lancamentos\").insert({",
+    "  descricao: form.get(\"descricao\"),",
+    "  valor: Number(form.get(\"valor\")),",
+    "});"
+   ]
+  }
+ },
+ "45": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "const { error } = await db.from(\"lancamentos\").insert({",
+    "  descricao: form.get(\"descricao\"),",
+    "  valor: Number(form.get(\"valor\")),",
+    "});"
+   ]
+  }
+ },
+ "52": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "\"use server\";",
+    "export async function criarLancamento(_estado: Estado, form: FormData) {",
+    "  // ... valida o valor e descobre o user, como antes",
+    "  await db.from(\"lancamentos\").insert({ user_id: user!.id, valor, descricao });",
+    "}"
+   ]
+  }
+ },
+ "53": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "\"use server\";",
+    "export async function criarLancamento(_estado: Estado, form: FormData) {",
+    "  // ... valida o valor e descobre o user, como antes",
+    "  await db.from(\"lancamentos\").insert({ user_id: user!.id, valor, descricao });",
+    "}"
+   ]
+  },
+  "b2": {
+   "kind": "code",
+   "text": [
+    "await db.from(\"lancamentos\").insert({ user_id: user!.id, valor, descricao });",
+    "revalidatePath(\"/lancamentos\");"
+   ]
+  }
+ },
+ "54": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "revalidatePath(\"/lancamentos\");",
+    "redirect(\"/lancamentos\");"
+   ]
+  }
+ },
+ "55": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "\"use server\";",
+    "export async function excluirLancamento(form: FormData) {",
+    "  // ... confere o usuário e apaga a linha do id recebido",
+    "}"
+   ]
+  }
+ },
+ "56": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "\"use server\";",
+    "export async function excluirLancamento(form: FormData) {",
+    "  // ... confere o usuário e apaga a linha do id recebido",
+    "}"
+   ]
+  }
+ },
+ "60": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "<form action={criarLancamento}>",
+    "  <input name=\"descricao\" required />",
+    "  <input name=\"valor\" type=\"number\" step=\"0.01\" required />",
+    "  <button>Salvar</button>",
+    "</form>"
+   ]
+  }
+ },
+ "61": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "export async function criarLancamento(form: FormData) {",
+    "  const valor = Number(form.get(\"valor\"));",
+    "  // valor vazio ou zero: a action pára aqui",
+    "  return { erro: \"Informe um valor maior que zero.\" };",
+    "  ...",
+    "}"
+   ]
+  }
+ },
+ "62": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "// actions.ts: ganha o estado anterior como primeiro parâmetro",
+    "export async function criarLancamento(_estado: Estado, form: FormData) { ... }",
+    "",
+    "// components/form-lancamento.tsx",
+    "\"use client\";",
+    "const [estado, acao] = useActionState(criarLancamento, { erro: \"\" });",
+    "<form action={acao}> ... </form>"
+   ]
+  }
+ },
+ "64": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "function BotaoSalvar() {",
+    "  return (",
+    "    <button>",
+    "      Salvar",
+    "    </button>",
+    "  );",
+    "}"
+   ],
+   "label": "Botão comum"
+  },
+  "b2": {
+   "kind": "code",
+   "text": [
+    "function BotaoSalvar() {",
+    "  const envio = useFormStatus();",
+    "  return (",
+    "    <button disabled={envio.pending}>",
+    "      Salvar",
+    "    </button>",
+    "  );",
+    "}"
+   ],
+   "label": "Botão que espera o envio"
+  }
+ },
+ "65": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "<form action={criarLancamento}>",
+    "  <input name=\"valor\" type=\"number\" />",
+    "  <button>Salvar</button>",
+    "</form>"
+   ]
+  }
+ },
+ "66": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "<form action={criarLancamento}>",
+    "  <input name=\"valor\" type=\"number\" />",
+    "  <button>Salvar</button>",
+    "</form>"
+   ]
+  }
+ },
+ "71": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "const { id } = await params;",
+    "const db = await supabaseServer();",
+    "const { data: lancamento } = await db",
+    "  .from(\"lancamentos\").select(\"*\")",
+    "  .eq(\"lancamento_id\", id).single();",
+    "",
+    "<input name=\"descricao\" defaultValue={lancamento.descricao} />",
+    "<input name=\"valor\" defaultValue={lancamento.valor} />",
+    "<input name=\"tipo\" defaultValue={lancamento.tipo} />",
+    "<input name=\"data\" defaultValue={lancamento.data_lancamento} />"
+   ]
+  }
+ },
+ "72": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "<form action={atualizarLancamento}>",
+    "  <input type=\"hidden\" name=\"id\" defaultValue={lancamento.lancamento_id} />",
+    "  <input name=\"descricao\" defaultValue={lancamento.descricao} />",
+    "  <input name=\"valor\" defaultValue={lancamento.valor} />",
+    "  <button>Salvar</button>",
+    "</form>"
+   ]
+  }
+ },
+ "73": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "// dentro da action atualizarLancamento",
+    "const id = Number(form.get(\"id\"));",
+    "await db",
+    "  .from(\"lancamentos\")",
+    "  .update({ descricao: form.get(\"descricao\"), valor: Number(form.get(\"valor\")) })",
+    "  .eq(\"lancamento_id\", id);"
+   ]
+  }
+ },
+ "75": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "// dentro da action excluir",
+    "const id = Number(form.get(\"id\"));",
+    "await db",
+    "  .from(\"lancamentos\")",
+    "  .delete()",
+    "  .eq(\"lancamento_id\", id);"
+   ]
+  }
+ },
+ "77": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "// no formulário de edição",
+    "<input type=\"hidden\" name=\"id\" defaultValue={1} />",
+    "// na action atualizarLancamento",
+    "const id = 1;",
+    "await db.from(\"lancamentos\").update({ valor: Number(form.get(\"valor\")) }).eq(\"lancamento_id\", id);"
+   ]
+  }
+ },
+ "78": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "// no formulário de edição",
+    "<input type=\"hidden\" name=\"id\" defaultValue={1} />",
+    "// na action atualizarLancamento",
+    "const id = 1;",
+    "await db.from(\"lancamentos\").update({ valor: Number(form.get(\"valor\")) }).eq(\"lancamento_id\", id);"
+   ]
+  }
+ },
+ "80": {
+  "b1": {
+   "kind": "prompt",
+   "text": [
+    "Você é revisor de código da Harve. Revise a minha solução para este requisito: A Cláudia quer a tela de categorias completa: criar, editar e excluir categoria (nome, tipo e cor em #RRGGBB), com a mesma validação, a mesma mensagem de erro e a lista atualizando na hora.",
+    "Confira, um por um, e aponte a linha:",
+    "- o insert grava o user_id do usuário logado",
+    "- validação antes de tocar no banco, com mensagem na tela",
+    "- revalidatePath e redirect depois de salvar",
+    "- editar e excluir agem só na linha do dono",
+    "Depois, liste os casos que quebram a solução e uma melhoria por vez, com o porquê. Não reescreva a solução: eu corrijo.",
+    "",
+    "[cole aqui o seu código]"
+   ]
+  },
+  "b2": {
+   "skip": true
+  }
+ },
+ "86": {
+  "b1": {
+   "kind": "prompt",
+   "text": [
+    "Continuando a Caderneta da Claudia, app Next.js com App Router, TypeScript e Supabase.",
+    "A Claudia quer um dashboard em /dashboard que responda as perguntas de dinheiro dela:",
+    "total de entradas do mes, total de saidas do mes, resultado do mes,",
+    "as cinco categorias que mais gastaram e a evolucao das saidas mes a mes.",
+    "Os dados sao do usuario logado, no periodo escolhido (padrao: junho de 2025).",
+    "O periodo vem pela URL, como /dashboard?mes=2025-06, e e lido no servidor.",
+    "Busque no Supabase apenas os lancamentos do periodo e monte os numeros na pagina.",
+    "Cada numero aparece num card reutilizavel, com valor em reais e data em dd/mm/aaaa.",
+    "Se nao houver lancamento no periodo, mostre uma mensagem no lugar dos cards.",
+    "Deixe no cliente apenas o grafico de barras das saidas mes a mes, feito com divs, sem biblioteca.",
+    "Mantenha os tipos do lancamento num arquivo so, sem usar any.",
+    "Me devolva os arquivos completos, com o caminho de cada um, prontos para rodar."
+   ]
+  }
+ },
+ "87": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "import { supabaseServer } from \"@/lib/supabase-server\"; // app/(app)/dashboard/page.tsx",
+    "export default async function Dashboard({ searchParams }: Props) {",
+    "  const { mes = \"2025-06\" } = await searchParams;",
+    "  const db = await supabaseServer();",
+    "  const { data } = await db.from(\"lancamentos\").select(\"tipo, valor\")",
+    "    .gte(\"data_lancamento\", `${mes}-01`).lte(\"data_lancamento\", `${mes}-30`);",
+    "  const soma = (t: string) =>",
+    "    (data ?? []).filter((l) => l.tipo === t).reduce((a, l) => a + Number(l.valor), 0);",
+    "  return <Cards entradas={soma(\"entrada\")} saidas={soma(\"saida\")} mes={mes} />;",
+    "}"
+   ]
+  }
+ },
+ "91": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "db.from(\"lancamentos\").select(\"valor\")",
+    "  .eq(\"tipo\", \"saida\")",
+    "  .eq(\"categoria_id\", 1)",
+    "  .gte(\"data_lancamento\", \"2025-05-01\")",
+    "  .lte(\"data_lancamento\", \"2025-05-31\")"
+   ]
+  }
+ },
+ "92": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "// volta: só as linhas de maio",
+    ".select(\"valor\")",
+    ".eq(\"tipo\", \"saida\")",
+    ".gte(\"data_lancamento\", \"2025-05-01\")",
+    ".lte(\"data_lancamento\", \"2025-05-31\")",
+    "",
+    "// o código só soma o que voltou",
+    "const total = ..."
+   ],
+   "label": "Filtrar na consulta"
+  },
+  "b2": {
+   "kind": "code",
+   "text": [
+    "// volta: todas as linhas do período",
+    ".select(\"tipo, valor, data_lancamento\")",
+    "",
+    "// o código confere cada linha e soma",
+    "// só as saídas de maio",
+    "const total = ..."
+   ],
+   "label": "Trazer tudo e somar no código"
+  },
+  "b3": {
+   "skip": true
+  }
+ },
+ "95": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "type CardProps = { titulo: string; valor: string };",
+    "",
+    "export function CardResumo({ titulo, valor }: CardProps) {",
+    "  return <div><p>{titulo}</p><strong>{valor}</strong></div>;",
+    "}",
+    "",
+    "<CardResumo titulo=\"Saídas\" valor=\"R$ 6.843,10\" />"
+   ]
+  }
+ },
+ "96": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "SELECT SUM(valor) FROM lancamentos",
+    "WHERE tipo = 'saida' AND user_id = 'id-da-claudia'",
+    "  AND data_lancamento >= '2025-06-01' AND data_lancamento <= '2025-06-30';"
+   ]
+  }
+ },
+ "97": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "const real = (n: number) =>",
+    "  n.toLocaleString(\"pt-BR\", { style: \"currency\", currency: \"BRL\" });",
+    "const dia = (iso: string) =>",
+    "  new Date(iso).toLocaleDateString(\"pt-BR\", { timeZone: \"UTC\" });"
+   ]
+  }
+ },
+ "100": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "db.from(\"lancamentos\").select(\"valor\")",
+    "  .gte(\"data_lancamento\", \"2025-06-01\")",
+    "  .lte(\"data_lancamento\", \"2025-06-30\")",
+    "// o .eq(\"tipo\", \"saida\") foi apagado"
+   ]
+  }
+ },
+ "101": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "db.from(\"lancamentos\").select(\"valor\")",
+    "  .gte(\"data_lancamento\", \"2025-06-01\")",
+    "  .lte(\"data_lancamento\", \"2025-06-30\")",
+    "// o .eq(\"tipo\", \"saida\") foi apagado"
+   ]
+  }
+ },
+ "105": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "type Lancamento = {",
+    "  lancamento_id: number;",
+    "  descricao: string;",
+    "  valor: number;",
+    "  tipo: string;",
+    "  data_lancamento: string;",
+    "};"
+   ]
+  }
+ },
+ "108": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "const lancamentos: Lancamento[] = dados;",
+    "const texto = lancamentos[0].obs;"
+   ],
+   "label": "Com o tipo"
+  },
+  "b2": {
+   "kind": "code",
+   "text": [
+    "const lancamentos: any = dados;",
+    "const texto = lancamentos[0].obs;"
+   ],
+   "label": "Com any"
+  }
+ },
+ "109": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "lancamentos: {",
+    "  Row: {",
+    "    lancamento_id: number;",
+    "    descricao: string;",
+    "    valor: number;",
+    "    tipo: string;",
+    "    data_lancamento: string;",
+    "  };"
+   ]
+  },
+  "b2": {
+   "skip": true
+  }
+ },
+ "110": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "// lib/tipos.ts",
+    "type Lancamento = {",
+    "  titulo: string; // era descricao",
+    "  ...",
+    "};"
+   ]
+  },
+  "b2": {
+   "skip": true
+  }
+ },
+ "111": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "// lib/tipos.ts",
+    "type Lancamento = {",
+    "  titulo: string; // era descricao",
+    "  ...",
+    "};"
+   ]
+  },
+  "b2": {
+   "skip": true
+  }
+ },
+ "117": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "const db = await supabaseServer();",
+    "const { categoria } = await searchParams;",
+    "const { data } = await db.from(\"lancamentos\").select(\"*, categorias(nome)\");",
+    "const vistos = data!.filter(",
+    "  (l) => !categoria || l.categorias?.nome === categoria",
+    ");",
+    "return <Lista lancamentos={vistos} />;"
+   ]
+  }
+ },
+ "118": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "const lista = data!",
+    "  .sort((a, b) => b.valor - a.valor);"
+   ]
+  }
+ },
+ "119": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "const { data } = await db",
+    "  .from(\"lancamentos\").select(\"*\")",
+    "  .order(\"valor\", { ascending: false });",
+    "const lista = data!;"
+   ],
+   "label": ".order() na consulta"
+  },
+  "b2": {
+   "kind": "code",
+   "text": [
+    "const { data } = await db",
+    "  .from(\"lancamentos\").select(\"*\");",
+    "const lista = data!",
+    "  .sort((a, b) => b.valor - a.valor);"
+   ],
+   "label": ".sort() depois"
+  }
+ },
+ "120": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "<li>",
+    "  {dados.descricao}",
+    "  {dados.valor > 1000 && (",
+    "    <span>acima de R$ 1.000</span>",
+    "  )}",
+    "</li>"
+   ],
+   "label": "A tarja no cartão"
+  },
+  "b2": {
+   "kind": "code",
+   "text": [
+    "{lancamentos.length > 0 ? (",
+    "  <CardResultado valor={resultado} />",
+    ") : (",
+    "  <p>Sem lançamento neste mês.</p>",
+    ")}"
+   ],
+   "label": "O card de resultado"
+  }
+ },
+ "123": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "type Lancamento = { id: number; descricao: string;",
+    "  valor: number; tipo: \"entrada\" | \"saida\" };"
+   ]
+  }
+ },
+ "124": {
+  "b1": {
+   "kind": "code",
+   "text": [
+    "type Lancamento = { id: number; descricao: string;",
+    "  valor: number; tipo: \"entrada\" | \"saida\" };"
+   ]
+  }
+ },
+ "138": {
+  "b1": {
+   "skip": true
+  }
+ },
+ "139": {
+  "b1": {
+   "skip": true
+  }
+ },
+ "141": {
+  "b1": {
+   "kind": "prompt",
+   "text": [
+    "Você é revisor de código da Harve. Revise a minha solução para este requisito: A Cláudia pediu um card 'maior gasto do mês' com descrição e data e quer escolher o período por 'de' e 'até' na URL; depois disso, publique a mudança e confira no ar.",
+    "Confira, um por um, e aponte a linha:",
+    "- o número da tela bate com o do banco",
+    "- a agregação está onde o portão decidiu, e você sabe defender",
+    "- cada modificação tem o seu commit, com mensagem clara",
+    "- o app no ar funciona com dois usuários e com as variáveis de produção",
+    "Depois, liste os casos que quebram a solução e uma melhoria por vez, com o porquê. Não reescreva a solução: eu corrijo.",
+    "",
+    "[cole aqui o seu código]"
+   ]
+  },
+  "b2": {
+   "skip": true
+  }
+ },
+ "163": {
+  "b1": {
+   "kind": "cmd",
+   "text": [
+    "sudo apt-get update"
+   ]
+  }
+ },
+ "183": {
+  "b1": {
+   "kind": "cmd",
+   "text": [
+    "brew install gh"
+   ]
+  },
+  "b2": {
+   "kind": "cmd",
+   "text": [
+    "brew upgrade gh"
+   ]
+  }
+ }
+}

@@ -1,7 +1,7 @@
 'use client'
 
 import { ReactNode, useCallback, useLayoutEffect, useRef, useState } from 'react'
-import { SLIDE_H, SLIDE_W } from '@/lib/deck'
+import { SLIDE_H, SLIDE_W } from '@/lib/deck-core'
 
 /**
  * Palco fixo de 960x540 px escalado por transform para caber no espaco

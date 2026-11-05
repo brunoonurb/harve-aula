@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation'
-import Deck from '@/components/Deck'
+import MainDeck from '@/components/MainDeck'
 import { TOTAL, slideTitles } from '@/lib/deck'
 
 /** Uma rota estatica por slide: /slide/16 abre direto no prompt do Passo 2. */
@@ -22,5 +22,5 @@ export default async function SlidePage({ params }: { params: Promise<{ n: strin
   const { n } = await params
   const i = Number(n)
   if (!Number.isInteger(i) || i < 1 || i > TOTAL) notFound()
-  return <Deck initial={i} />
+  return <MainDeck initial={i} />
 }

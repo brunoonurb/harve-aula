@@ -1,6 +1,6 @@
 'use client'
 
-import { SlideDownloadGroup } from '@/lib/deck'
+import { SlideDownloadGroup } from '@/lib/deck-core'
 
 /**
  * Botoes de download ancorados sobre o slide (palco 960x540). Sao links

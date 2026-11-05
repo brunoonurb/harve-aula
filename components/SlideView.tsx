@@ -12,12 +12,11 @@ import {
   SLIDE_W,
   Slide,
   TextBody,
-  codeBlockFor,
-  downloadsOf,
   fontSpec,
   isLightColor,
   placeholderSegments,
-} from '@/lib/deck'
+} from '@/lib/deck-core'
+import { useDeckSource } from '@/components/DeckSourceContext'
 import CodeBlockControls from '@/components/CodeBlockControls'
 import SlideDownloads from '@/components/SlideDownloads'
 
@@ -40,6 +39,7 @@ type Props = {
 type Segments = Map<string, { t: string; ph: boolean }[]>
 
 export default function SlideView({ slide, interactive = false, highlight = true, onExpand }: Props) {
+  const { downloadsOf } = useDeckSource()
   const downloads = downloadsOf(slide.n)
   return (
     <div className="slide-root" style={{ width: SLIDE_W, height: SLIDE_H }}>
@@ -71,12 +71,25 @@ function ElementView({
   highlight: boolean
   onExpand?: (block: CodeBlock) => void
 }) {
+  const { mediaPath, codeBlockFor } = useDeckSource()
   const frame: CSSProperties = {
     position: 'absolute',
     left: el.box.x,
     top: el.box.y,
     width: el.box.w,
     height: el.box.h,
+  }
+
+  // Deck vindo de PDF: area copiavel sobreposta a imagem da pagina. Nao desenha
+  // nada (o texto ja esta na imagem); so recebe os botoes Copiar / tela cheia.
+  if (el.kind === 'copy') {
+    const copyBlock = codeBlockFor(slideN, el.id)
+    if (!copyBlock || !interactive) return null
+    return (
+      <div className="code-block" style={frame}>
+        <CodeBlockControls block={copyBlock} onExpand={onExpand} />
+      </div>
+    )
   }
 
   if (el.kind === 'image') {
@@ -103,7 +116,15 @@ function ElementView({
         }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={`/media/${el.src}`} alt="" draggable={false} style={inner} />
+        <img
+          // miniaturas (grade/apresentador) usam a versao leve, quando existe
+          src={`${mediaPath}/${!interactive && el.thumb ? el.thumb : el.src}`}
+          alt={el.alt ?? ''}
+          draggable={false}
+          loading={interactive ? undefined : 'lazy'}
+          decoding="async"
+          style={inner}
+        />
       </div>
     )
   }

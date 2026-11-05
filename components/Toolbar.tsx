@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { CodeBlock, hasPlaceholders, stripPlaceholders } from '@/lib/deck'
+import { CodeBlock, hasPlaceholders, stripPlaceholders } from '@/lib/deck-core'
 import { useCopy } from '@/lib/useCopy'
 
 /** Barra de controles que se esconde sozinha durante a apresentacao. */
@@ -36,7 +36,14 @@ export default function Toolbar({
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const { copied, copy } = useCopy()
   const prompt = prompts.find((p) => p.expandable) ?? prompts[0]
-  const copyLabel = prompt?.expandable ? 'Copiar prompt' : 'Copiar código'
+  const copyLabel =
+    prompt?.kind === 'cmd'
+      ? 'Copiar comando'
+      : prompt?.kind === 'code'
+        ? 'Copiar código'
+        : prompt?.expandable
+          ? 'Copiar prompt'
+          : 'Copiar código'
   const showClean = !!prompt && hasPlaceholders(prompt.text)
 
   useEffect(() => {
@@ -101,7 +108,7 @@ export default function Toolbar({
               type="button"
               className="tb-btn tb-btn-wide tb-accent"
               onClick={() => copy(prompt.text, 'raw')}
-              title="Copiar o prompt deste slide (C)"
+              title={prompt.kind ? 'Copiar o bloco deste slide (C)' : 'Copiar o prompt deste slide (C)'}
             >
               {copied === 'raw' ? '✓ Copiado' : copyLabel}
             </button>

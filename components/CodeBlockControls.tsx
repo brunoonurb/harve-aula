@@ -1,6 +1,6 @@
 'use client'
 
-import { CodeBlock, hasPlaceholders, stripPlaceholders } from '@/lib/deck'
+import { CodeBlock, hasPlaceholders, stripPlaceholders } from '@/lib/deck-core'
 import { useCopy } from '@/lib/useCopy'
 
 /**
@@ -17,6 +17,7 @@ export default function CodeBlockControls({
 }) {
   const { copied, copy } = useCopy()
   const clean = hasPlaceholders(block.text)
+  const noun = block.kind === 'code' ? 'o código' : block.kind === 'cmd' ? 'o comando' : 'o prompt'
 
   return (
     <div className="cb-controls" onPointerDown={(e) => e.stopPropagation()}>
@@ -24,7 +25,7 @@ export default function CodeBlockControls({
         type="button"
         className="cb-btn"
         onClick={() => copy(block.text, 'raw')}
-        title="Copiar o prompt com os 【placeholders】"
+        title={clean ? 'Copiar o prompt com os 【placeholders】' : `Copiar ${noun}`}
       >
         {copied === 'raw' ? '✓ copiado' : 'Copiar'}
       </button>
@@ -43,8 +44,8 @@ export default function CodeBlockControls({
           type="button"
           className="cb-btn cb-btn-icon"
           onClick={() => onExpand(block)}
-          title="Abrir o prompt em tela cheia (E)"
-          aria-label="Abrir o prompt em tela cheia"
+          title={`Abrir ${noun} em tela cheia (E)`}
+          aria-label={`Abrir ${noun} em tela cheia`}
         >
           <svg viewBox="0 0 16 16" width="9" height="9" aria-hidden="true">
             <path

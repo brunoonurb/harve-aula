@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import { codeBlocksOf, slideTitles, slides } from '@/lib/deck'
+import { useDeckSource } from '@/components/DeckSourceContext'
 import Thumb from '@/components/Thumb'
 
 /** Grade com todos os slides (tecla G). */
@@ -15,6 +15,7 @@ export default function SlideGrid({
   onClose: () => void
 }) {
   const activeRef = useRef<HTMLButtonElement>(null)
+  const { slides, titles: slideTitles, codeBlocksOf } = useDeckSource()
 
   useEffect(() => {
     activeRef.current?.scrollIntoView({ block: 'center' })

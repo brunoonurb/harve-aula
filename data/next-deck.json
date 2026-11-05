@@ -1,0 +1,2185 @@
+{
+ "w": 960,
+ "h": 540,
+ "slides": [
+  {
+   "n": 1,
+   "title": "Slide 1",
+   "img": "p001.webp",
+   "thumb": "p001-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 2,
+   "title": "react com next.js e ia",
+   "img": "p002.webp",
+   "thumb": "p002-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 3,
+   "title": "Bruno Pedroso - Sobre",
+   "img": "p003.webp",
+   "thumb": "p003-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 4,
+   "title": "Bruno Pedroso - Carreira",
+   "img": "p004.webp",
+   "thumb": "p004-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 5,
+   "title": "Bruno Pedroso- Contatos",
+   "img": "p005.webp",
+   "thumb": "p005-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 6,
+   "title": "Bruno Pedroso - Experiência",
+   "img": "p006.webp",
+   "thumb": "p006-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 7,
+   "title": "Bruno Pedroso - Formação acadêmica",
+   "img": "p007.webp",
+   "thumb": "p007-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 8,
+   "title": "FOTOGRAFIA DO MÓDULO",
+   "img": "p008.webp",
+   "thumb": "p008-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 9,
+   "title": "Comece pelo porquê",
+   "img": "p009.webp",
+   "thumb": "p009-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 10,
+   "title": "Ninguém mais monta um site do zero: o framework virou o ponto de partida",
+   "img": "p010.webp",
+   "thumb": "p010-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 11,
+   "title": "React tem mais de dez anos de estrada — e o Next.js é a camada que faltava",
+   "img": "p011.webp",
+   "thumb": "p011-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 12,
+   "title": "Saber o nome das peças é o que faz você pedir a coisa certa à IA",
+   "img": "p012.webp",
+   "thumb": "p012-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 13,
+   "title": "Você sai sabendo o que roda onde — e defendendo a escolha em voz alta",
+   "img": "p013.webp",
+   "thumb": "p013-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 14,
+   "title": "aula 1",
+   "img": "p014.webp",
+   "thumb": "p014-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 15,
+   "title": "FERRAMENTAS",
+   "img": "p015.webp",
+   "thumb": "p015-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 16,
+   "title": "O que você vai usar",
+   "img": "p016.webp",
+   "thumb": "p016-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 17,
+   "title": "Os caminhos possíveis",
+   "img": "p017.webp",
+   "thumb": "p017-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 18,
+   "title": "Controle Financeiro Pessoal",
+   "img": "p018.webp",
+   "thumb": "p018-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 19,
+   "title": "Controle Financeiro Pessoal: arquivos",
+   "img": "p019.webp",
+   "thumb": "p019-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 20,
+   "title": "CHECK-POINT",
+   "img": "p020.webp",
+   "thumb": "p020-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 21,
+   "title": "GERAR - ESQUELETO DO APP",
+   "img": "p021.webp",
+   "thumb": "p021-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 22,
+   "title": "A planilha da Cláudia não aguenta mais. Como separar o dinheiro dela do dinheiro do Paulo?",
+   "img": "p022.webp",
+   "thumb": "p022-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 23,
+   "title": "O que sai desta aula",
+   "img": "p023.webp",
+   "thumb": "p023-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 24,
+   "title": "Peça o esqueleto do app à IA",
+   "img": "p024.webp",
+   "thumb": "p024-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 159.3,
+      "w": 832.0,
+      "h": 301.7
+     },
+     "heading": "O PEDIDO À IA",
+     "lines": 13,
+     "text": "Sou dev iniciante e vou construir a Caderneta da Claudia, um app de controle financeiro\npessoal.\nCrie o esqueleto do app em Next.js com App Router e TypeScript, sem banco de dados ainda.\nTelas: / (apresentacao), /lancamentos (lista) e /lancamentos/[id] (um lancamento).\nA area de /lancamentos e /dashboard tem um layout proprio com menu Lancamentos e\nDashboard.\nUse esta lista fixa de exemplo dentro do codigo:\n{ id: 1, descricao: \"mercado do mes\", valor: 341.43, tipo: \"saida\", data: \"2025-01-01\" }\n{ id: 2, descricao: \"salario\", valor: 856.74, tipo: \"entrada\", data: \"2025-01-02\" }\nCada lancamento aparece num componente LancamentoCard, com props tipadas, usado com map.\nNavegue entre as telas com Link e crie loading.tsx e not-found.tsx simples.\nNao use banco, nem rotas de API, nem estado de cliente, nem bibliotecas extras.\nMe devolva os arquivos completos, com o caminho de cada um, prontos para npm run dev."
+    }
+   ]
+  },
+  {
+   "n": 25,
+   "title": "Peça o esqueleto do app à IA",
+   "img": "p025.webp",
+   "thumb": "p025-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 159.3,
+      "w": 832.0,
+      "h": 260.1
+     },
+     "heading": "CÓDIGO DE REFERÊNCIA",
+     "lines": 10,
+     "text": "import { LancamentoCard } from \"@/components/lancamento-card\";\n\nconst lancamentos = [\n  { id: 1, descricao: \"mercado do mes\", valor: 341.43, tipo: \"saida\" },\n  { id: 2, descricao: \"salario\", valor: 856.74, tipo: \"entrada\" },\n];\n\nexport default function LancamentosPage() {\n  return <ul>{lancamentos.map((l) <> <LancamentoCard key={l.id} dados={l} <>)}</ul>;\n}"
+    }
+   ]
+  },
+  {
+   "n": 26,
+   "title": "CHECK-POINT",
+   "img": "p026.webp",
+   "thumb": "p026-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 27,
+   "title": "aula 2",
+   "img": "p027.webp",
+   "thumb": "p027-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 28,
+   "title": "aula 3",
+   "img": "p028.webp",
+   "thumb": "p028-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 29,
+   "title": "aula 4",
+   "img": "p029.webp",
+   "thumb": "p029-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 30,
+   "title": "GERAR - PEÇA O FORMULÁRIO",
+   "img": "p030.webp",
+   "thumb": "p030-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 31,
+   "title": "A Cláudia quer lançar o mercado de hoje. Para onde vai esse formulário?",
+   "img": "p031.webp",
+   "thumb": "p031-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 32,
+   "title": "Peça o formulário, a action e a edição",
+   "img": "p032.webp",
+   "thumb": "p032-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 159.3,
+      "w": 832.0,
+      "h": 354.0
+     },
+     "heading": "O PEDIDO À IA",
+     "lines": 16,
+     "text": "Continuando a Caderneta da Claudia, app Next.js com App Router, TypeScript e Supabase com\nRLS.\nHoje o app so le lancamentos; quero que a Claudia consiga lancar, editar e excluir pelo\napp.\nCrie /lancamentos/novo com formulario de descricao, valor, tipo (entrada ou saida), data,\nconta e categoria, usando as contas e categorias do usuario logado.\nA gravacao deve ser feita por uma Server Action num arquivo de actions, nunca por rota de\nAPI.\nA action precisa conferir os dados (valor maior que zero e descricao preenchida),\ngravar com o user_id de quem esta logado, devolver mensagem de erro em vez de quebrar,\natualizar a lista de /lancamentos e levar a Claudia de volta para ela.\nNo formulario, mostre a mensagem de erro na tela e desabilite o botao enquanto envia.\nCrie tambem /lancamentos/[id]/editar com o formulario ja preenchido e exclusao com\nconfirmacao.\nSem bibliotecas de validacao ou de formulario: so o que vem com o Next.\nMe devolva os arquivos completos, com o caminho de cada um."
+    }
+   ]
+  },
+  {
+   "n": 33,
+   "title": "Peça o formulário, a action e a edição",
+   "img": "p033.webp",
+   "thumb": "p033-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 159.3,
+      "w": 832.0,
+      "h": 278.5
+     },
+     "heading": "CÓDIGO DE REFERÊNCIA",
+     "lines": 12,
+     "text": "\"use server\"; </ app/lancamentos/actions.ts\nexport async function criarLancamento(_estado: Estado, form: FormData) {\n  const valor = Number(form.get(\"valor\"));\n  if (!valor <| valor <= 0) return { erro: \"Informe um valor maior que zero.\" };\n  const db = await supabaseServer();\n  const { data: { user } } = await db.auth.getUser();\n  const { error } = await db.from(\"lancamentos\").insert({ user_id: user!.id,\n    valor, tipo: form.get(\"tipo\"), descricao: form.get(\"descricao\") });\n  if (error) return { erro: \"Nao consegui salvar. Tente de novo.\" };\n  revalidatePath(\"/lancamentos\");\n  redirect(\"/lancamentos\");\n}"
+    }
+   ]
+  },
+  {
+   "n": 34,
+   "title": "CHECK-POINT",
+   "img": "p034.webp",
+   "thumb": "p034-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 35,
+   "title": "SERVER ACTIONS",
+   "img": "p035.webp",
+   "thumb": "p035-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 36,
+   "title": "Nenhuma rota de API no projeto. Então como o dado chegou ao banco?",
+   "img": "p036.webp",
+   "thumb": "p036-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 37,
+   "title": "'use server': a função que nunca viaja",
+   "img": "p037.webp",
+   "thumb": "p037-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 181.0,
+      "w": 832.0,
+      "h": 119.0
+     },
+     "heading": null,
+     "lines": 4,
+     "text": "async function criarLancamento() {\n  \"use server\";\n\n  console.log(\"criarLancamento rodou\");"
+    },
+    {
+     "id": "b2",
+     "box": {
+      "x": 74.0,
+      "y": 275.8,
+      "w": 24.0,
+      "h": 33.6
+     },
+     "heading": null,
+     "lines": 1,
+     "text": "}"
+    }
+   ]
+  },
+  {
+   "n": 38,
+   "title": "Do campo ao formData",
+   "img": "p038.webp",
+   "thumb": "p038-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 233.4,
+      "w": 832.0,
+      "h": 135.8
+     },
+     "heading": "O FORMULÁRIO (TELA)",
+     "lines": 5,
+     "text": "<form action={criarLancamento}>\n  <input name=\"descricao\" .>\n  <input name=\"valor\" .>\n  <button>Salvar./button>\n./form>"
+    }
+   ]
+  },
+  {
+   "n": 39,
+   "title": "A action lê os campos do formData",
+   "img": "p039.webp",
+   "thumb": "p039-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 202.8,
+      "w": 832.0,
+      "h": 174.0
+     },
+     "heading": "A ACTION (SERVIDOR)",
+     "lines": 6,
+     "text": "async function criarLancamento(\n  form: FormData,\n) {\n  const descricao = form.get(\"descricao\");\n  const valor = form.get(\"valor\");\n}"
+    }
+   ]
+  },
+  {
+   "n": 40,
+   "title": "Gravar já com o dono certo",
+   "img": "p040.webp",
+   "thumb": "p040-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 181.0,
+      "w": 832.0,
+      "h": 175.5
+     },
+     "heading": null,
+     "lines": 8,
+     "text": "const db = await supabaseServer();\nconst { data: { user } } = await db.auth.getUser();\nawait db.from(\"lancamentos\").insert({\n  user_id: user!.id,\n  descricao: form.get(\"descricao\"),\n  valor: Number(form.get(\"valor\")),\n  tipo: form.get(\"tipo\"),\n});"
+    }
+   ]
+  },
+  {
+   "n": 41,
+   "title": "Onde moram as actions",
+   "img": "p041.webp",
+   "thumb": "p041-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 42,
+   "title": "Conferir antes de tocar no banco",
+   "img": "p042.webp",
+   "thumb": "p042-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 139.3,
+      "w": 832.0,
+      "h": 100.8
+     },
+     "heading": null,
+     "lines": 4,
+     "text": "const valor = Number(form.get(\"valor\"));\n./ 1. conferir o valor: a regra do caso\n./ 2. só então falar com o banco\nawait db.from(\"lancamentos\").insert({ ... });"
+    }
+   ]
+  },
+  {
+   "n": 43,
+   "title": "Quando a action basta",
+   "img": "p043.webp",
+   "thumb": "p043-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 44,
+   "title": "Apaguei o user_id do insert",
+   "img": "p044.webp",
+   "thumb": "p044-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 159.3,
+      "w": 832.0,
+      "h": 117.6
+     },
+     "heading": "A ACTION DEPOIS DA EDIÇÃO",
+     "lines": 4,
+     "text": "const { error } = await db.from(\"lancamentos\").insert({\n  descricao: form.get(\"descricao\"),\n  valor: Number(form.get(\"valor\")),\n});"
+    }
+   ]
+  },
+  {
+   "n": 45,
+   "title": "Apaguei o user_id do insert",
+   "img": "p045.webp",
+   "thumb": "p045-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 159.3,
+      "w": 832.0,
+      "h": 117.6
+     },
+     "heading": "A ACTION DEPOIS DA EDIÇÃO",
+     "lines": 4,
+     "text": "const { error } = await db.from(\"lancamentos\").insert({\n  descricao: form.get(\"descricao\"),\n  valor: Number(form.get(\"valor\")),\n});"
+    }
+   ]
+  },
+  {
+   "n": 46,
+   "title": "CHECK-POINT",
+   "img": "p046.webp",
+   "thumb": "p046-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 47,
+   "title": "ATUALIZAR A TELA",
+   "img": "p047.webp",
+   "thumb": "p047-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 48,
+   "title": "Gravou no banco e a lista continua igual. Por onde você começa?",
+   "img": "p048.webp",
+   "thumb": "p048-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 49,
+   "title": "Separar 'não gravou' de 'não atualizou'",
+   "img": "p049.webp",
+   "thumb": "p049-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 50,
+   "title": "Separar 'não gravou' de 'não atualizou'",
+   "img": "p050.webp",
+   "thumb": "p050-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 51,
+   "title": "O cache do Next em uma frase",
+   "img": "p051.webp",
+   "thumb": "p051-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 52,
+   "title": "revalidatePath: avisar que a rota mudou",
+   "img": "p052.webp",
+   "thumb": "p052-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 159.3,
+      "w": 832.0,
+      "h": 128.8
+     },
+     "heading": "COMO A IA ENTREGOU",
+     "lines": 5,
+     "text": "\"use server\";\nexport async function criarLancamento(_estado: Estado, form: FormData) {\n  ./ ... valida o valor e descobre o user, como antes\n  await db.from(\"lancamentos\").insert({ user_id: user!.id, valor, descricao });\n}"
+    }
+   ]
+  },
+  {
+   "n": 53,
+   "title": "revalidatePath: avisar que a rota mudou",
+   "img": "p053.webp",
+   "thumb": "p053-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 159.3,
+      "w": 832.0,
+      "h": 128.8
+     },
+     "heading": "COMO A IA ENTREGOU",
+     "lines": 5,
+     "text": "\"use server\";\nexport async function criarLancamento(_estado: Estado, form: FormData) {\n  ./ ... valida o valor e descobre o user, como antes\n  await db.from(\"lancamentos\").insert({ user_id: user!.id, valor, descricao });\n}"
+    },
+    {
+     "id": "b2",
+     "box": {
+      "x": 64.0,
+      "y": 308.1,
+      "w": 832.0,
+      "h": 78.4
+     },
+     "heading": "A LINHA QUE FALTAVA",
+     "lines": 2,
+     "text": "  await db.from(\"lancamentos\").insert({ user_id: user!.id, valor, descricao });\n  revalidatePath(\"/lancamentos\");"
+    }
+   ]
+  },
+  {
+   "n": 54,
+   "title": "Voltar para a lista depois de salvar",
+   "img": "p054.webp",
+   "thumb": "p054-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 235.3,
+      "w": 832.0,
+      "h": 61.6
+     },
+     "heading": null,
+     "lines": 2,
+     "text": "  revalidatePath(\"/lancamentos\");\n  redirect(\"/lancamentos\");"
+    }
+   ]
+  },
+  {
+   "n": 55,
+   "title": "Excluiu e o item só some ao recarregar",
+   "img": "p055.webp",
+   "thumb": "p055-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 201.0,
+      "w": 832.0,
+      "h": 95.2
+     },
+     "heading": null,
+     "lines": 4,
+     "text": "\"use server\";\nexport async function excluirLancamento(form: FormData) {\n  ./ ... confere o usuário e apaga a linha do id recebido\n}"
+    }
+   ]
+  },
+  {
+   "n": 56,
+   "title": "Excluiu e o item só some ao recarregar",
+   "img": "p056.webp",
+   "thumb": "p056-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 201.0,
+      "w": 832.0,
+      "h": 95.2
+     },
+     "heading": null,
+     "lines": 4,
+     "text": "\"use server\";\nexport async function excluirLancamento(form: FormData) {\n  ./ ... confere o usuário e apaga a linha do id recebido\n}"
+    }
+   ]
+  },
+  {
+   "n": 57,
+   "title": "CHECK-POINT",
+   "img": "p057.webp",
+   "thumb": "p057-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 58,
+   "title": "ERROS NO FORMULÁRIO",
+   "img": "p058.webp",
+   "thumb": "p058-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 59,
+   "title": "O que a Cláudia vê quando digita o valor errado?",
+   "img": "p059.webp",
+   "thumb": "p059-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 60,
+   "title": "O erro mais barato é no próprio campo",
+   "img": "p060.webp",
+   "thumb": "p060-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 139.3,
+      "w": 832.0,
+      "h": 135.8
+     },
+     "heading": "COMPONENTS/FORM-LANCAMENTO.TSX",
+     "lines": 5,
+     "text": "<form action={criarLancamento}>\n  <input name=\"descricao\" required <>\n  <input name=\"valor\" type=\"number\" step=\"0.01\" required <>\n  <button>Salvar</button>\n</form>"
+    }
+   ]
+  },
+  {
+   "n": 61,
+   "title": "A action devolve mensagem, não exceção",
+   "img": "p061.webp",
+   "thumb": "p061-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 139.3,
+      "w": 832.0,
+      "h": 140.1
+     },
+     "heading": null,
+     "lines": 6,
+     "text": "export async function criarLancamento(form: FormData) {\n  const valor = Number(form.get(\"valor\"));\n  </ valor vazio ou zero: a action pára aqui\n  return { erro: \"Informe um valor maior que zero.\" };\n  <<.\n}"
+    }
+   ]
+  },
+  {
+   "n": 62,
+   "title": "useActionState costura action e tela",
+   "img": "p062.webp",
+   "thumb": "p062-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 202.8,
+      "w": 832.0,
+      "h": 157.6
+     },
+     "heading": null,
+     "lines": 7,
+     "text": "</ actions.ts: ganha o estado anterior como primeiro parâmetro\nexport async function criarLancamento(_estado: Estado, form: FormData) { <<. }\n\n</ components/form-lancamento.tsx\n\"use client\";\nconst [estado, acao] = useActionState(criarLancamento, { erro: \"\" });\n<form action={acao}> <<. </form>"
+    }
+   ]
+  },
+  {
+   "n": 63,
+   "title": "A mensagem perto do campo certo",
+   "img": "p063.webp",
+   "thumb": "p063-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 64,
+   "title": "Botão desabilitado enquanto envia",
+   "img": "p064.webp",
+   "thumb": "p064-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 236.3,
+      "w": 397.5,
+      "h": 145.6
+     },
+     "heading": null,
+     "lines": 7,
+     "text": "function BotaoSalvar() {\n  return (\n    <button>\n      Salvar\n    </button>\n  );\n}"
+    },
+    {
+     "id": "b2",
+     "box": {
+      "x": 498.5,
+      "y": 236.3,
+      "w": 397.5,
+      "h": 162.4
+     },
+     "heading": null,
+     "lines": 8,
+     "text": "function BotaoSalvar() {\n  const envio = useFormStatus();\n  return (\n    <button <=disabled={envio.pending}<<>\n      Salvar\n    </button>\n  );\n}"
+    }
+   ]
+  },
+  {
+   "n": 65,
+   "title": "A mensagem volta, mas ninguém mostra",
+   "img": "p065.webp",
+   "thumb": "p065-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 159.3,
+      "w": 832.0,
+      "h": 112.0
+     },
+     "heading": "APP/LANCAMENTOS/NOVO/PAGE.TSX · COMPONENTE DE SERVIDOR",
+     "lines": 4,
+     "text": "<form action={criarLancamento}>\n  <input name=\"valor\" type=\"number\" <>\n  <button>Salvar</button>\n</form>"
+    }
+   ]
+  },
+  {
+   "n": 66,
+   "title": "A mensagem volta, mas ninguém mostra",
+   "img": "p066.webp",
+   "thumb": "p066-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 159.3,
+      "w": 832.0,
+      "h": 112.0
+     },
+     "heading": "APP/LANCAMENTOS/NOVO/PAGE.TSX · COMPONENTE DE SERVIDOR",
+     "lines": 4,
+     "text": "<form action={criarLancamento}>\n  <input name=\"valor\" type=\"number\" <>\n  <button>Salvar</button>\n</form>"
+    }
+   ]
+  },
+  {
+   "n": 67,
+   "title": "CHECK-POINT",
+   "img": "p067.webp",
+   "thumb": "p067-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 68,
+   "title": "EDITAR E EXCLUIR",
+   "img": "p068.webp",
+   "thumb": "p068-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 69,
+   "title": "Como editar exatamente o lançamento que a Cláudia clicou?",
+   "img": "p069.webp",
+   "thumb": "p069-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 70,
+   "title": "A rota /lancamentos/[id]/editar",
+   "img": "p070.webp",
+   "thumb": "p070-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 71,
+   "title": "O formulário já preenchido",
+   "img": "p071.webp",
+   "thumb": "p071-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 139.3,
+      "w": 482.4,
+      "h": 220.1
+     },
+     "heading": null,
+     "lines": 10,
+     "text": "const { id } = await params;\nconst db = await supabaseServer();\nconst { data: lancamento } = await db\n  .from(\"lancamentos\").select(\"*\")\n  .eq(\"lancamento_id\", id).single();\n\n<input name=\"descricao\" defaultValue={lancamento.descricao} />\n<input name=\"valor\" defaultValue={lancamento.valor} />\n<input name=\"tipo\" defaultValue={lancamento.tipo} />\n<input name=\"data\" defaultValue={lancamento.data_lancamento} />"
+    }
+   ]
+  },
+  {
+   "n": 72,
+   "title": "Levar o id junto no envio",
+   "img": "p072.webp",
+   "thumb": "p072-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 139.3,
+      "w": 832.0,
+      "h": 149.6
+     },
+     "heading": null,
+     "lines": 6,
+     "text": "<form action={atualizarLancamento}>\n  <input type=\"hidden\" name=\"id\" defaultValue={lancamento.lancamento_id} />\n  <input name=\"descricao\" defaultValue={lancamento.descricao} />\n  <input name=\"valor\" defaultValue={lancamento.valor} />\n  <button>Salvar//button>\n//form>"
+    }
+   ]
+  },
+  {
+   "n": 73,
+   "title": "Atualizar só a linha do dono",
+   "img": "p073.webp",
+   "thumb": "p073-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 233.4,
+      "w": 832.0,
+      "h": 138.5
+     },
+     "heading": null,
+     "lines": 6,
+     "text": "// dentro da action atualizarLancamento\nconst id = Number(form.get(\"id\"));\nawait db\n  .from(\"lancamentos\")\n  .update({ descricao: form.get(\"descricao\"), valor: Number(form.get(\"valor\")) })\n  .eq(\"lancamento_id\", id);"
+    }
+   ]
+  },
+  {
+   "n": 74,
+   "title": "Se o id for do Paulo",
+   "img": "p074.webp",
+   "thumb": "p074-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 75,
+   "title": "Excluir, com confirmação",
+   "img": "p075.webp",
+   "thumb": "p075-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 494.0,
+      "y": 139.3,
+      "w": 402.0,
+      "h": 136.9
+     },
+     "heading": null,
+     "lines": 6,
+     "text": "// dentro da action excluir\nconst id = Number(form.get(\"id\"));\nawait db\n  .from(\"lancamentos\")\n  .delete()\n  .eq(\"lancamento_id\", id);"
+    }
+   ]
+  },
+  {
+   "n": 76,
+   "title": "O mesmo padrão para categorias",
+   "img": "p076.webp",
+   "thumb": "p076-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 77,
+   "title": "A edição salva sempre no primeiro lançamento",
+   "img": "p077.webp",
+   "thumb": "p077-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 159.3,
+      "w": 832.0,
+      "h": 112.0
+     },
+     "heading": null,
+     "lines": 5,
+     "text": "// no formulário de edição\n<input type=\"hidden\" name=\"id\" defaultValue={1} />\n// na action atualizarLancamento\nconst id = 1;\nawait db.from(\"lancamentos\").update({ valor: Number(form.get(\"valor\")) }).eq(\"lancamento_id\", id);"
+    }
+   ]
+  },
+  {
+   "n": 78,
+   "title": "A edição salva sempre no primeiro lançamento",
+   "img": "p078.webp",
+   "thumb": "p078-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 159.3,
+      "w": 832.0,
+      "h": 112.0
+     },
+     "heading": null,
+     "lines": 5,
+     "text": "// no formulário de edição\n<input type=\"hidden\" name=\"id\" defaultValue={1} />\n// na action atualizarLancamento\nconst id = 1;\nawait db.from(\"lancamentos\").update({ valor: Number(form.get(\"valor\")) }).eq(\"lancamento_id\", id);"
+    }
+   ]
+  },
+  {
+   "n": 79,
+   "title": "Categorias: criar, editar e excluir",
+   "img": "p079.webp",
+   "thumb": "p079-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 80,
+   "title": "A IA revisa a sua escrita no banco",
+   "img": "p080.webp",
+   "thumb": "p080-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 222.8,
+      "w": 832.0,
+      "h": 229.6
+     },
+     "heading": "PROMPT DE AVALIAÇÃO DA HARVE",
+     "lines": 10,
+     "text": "Você é revisor de código da Harve. Revise a minha solução para este requisito: A Cláudia\nquer a tela de categorias completa: criar, editar e excluir categoria (nome, tipo e cor em\n#RRGGBB), com a mesma validação, a mesma mensagem de erro e a lista atualizando na hora.\nConfira, um por um, e aponte a linha:\n- o insert grava o user_id do usuário logado\n- validação antes de tocar no banco, com mensagem na tela\n- revalidatePath e redirect depois de salvar\n- editar e excluir agem só na linha do dono\nDepois, liste os casos que quebram a solução e uma melhoria por vez, com o porquê. Não\nreescreva a solução: eu corrijo."
+    },
+    {
+     "id": "b2",
+     "box": {
+      "x": 74.0,
+      "y": 444.1,
+      "w": 188.8,
+      "h": 31.8
+     },
+     "heading": null,
+     "lines": 1,
+     "text": "[cole aqui o seu código]"
+    }
+   ]
+  },
+  {
+   "n": 81,
+   "title": "As ordens de serviço da oficina de bicicletas",
+   "img": "p081.webp",
+   "thumb": "p081-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 82,
+   "title": "CHECK-POINT",
+   "img": "p082.webp",
+   "thumb": "p082-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 83,
+   "title": "aula 5",
+   "img": "p083.webp",
+   "thumb": "p083-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 84,
+   "title": "GERAR - DASHBOARD",
+   "img": "p084.webp",
+   "thumb": "p084-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 85,
+   "title": "Neste mês entrou mais ou saiu mais?",
+   "img": "p085.webp",
+   "thumb": "p085-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 86,
+   "title": "Peça o dashboard das cinco perguntas",
+   "img": "p086.webp",
+   "thumb": "p086-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 159.3,
+      "w": 832.0,
+      "h": 263.1
+     },
+     "heading": "O PEDIDO À IA",
+     "lines": 13,
+     "text": "Continuando a Caderneta da Claudia, app Next.js com App Router, TypeScript e Supabase.\nA Claudia quer um dashboard em /dashboard que responda as perguntas de dinheiro dela:\ntotal de entradas do mes, total de saidas do mes, resultado do mes,\nas cinco categorias que mais gastaram e a evolucao das saidas mes a mes.\nOs dados sao do usuario logado, no periodo escolhido (padrao: junho de 2025).\nO periodo vem pela URL, como /dashboard?mes=2025-06, e e lido no servidor.\nBusque no Supabase apenas os lancamentos do periodo e monte os numeros na pagina.\nCada numero aparece num card reutilizavel, com valor em reais e data em dd/mm/aaaa.\nSe nao houver lancamento no periodo, mostre uma mensagem no lugar dos cards.\nDeixe no cliente apenas o grafico de barras das saidas mes a mes, feito com divs, sem\nbiblioteca.\nMantenha os tipos do lancamento num arquivo so, sem usar any.\nMe devolva os arquivos completos, com o caminho de cada um, prontos para rodar."
+    }
+   ]
+  },
+  {
+   "n": 87,
+   "title": "Peça o dashboard das cinco perguntas",
+   "img": "p087.webp",
+   "thumb": "p087-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 159.3,
+      "w": 832.0,
+      "h": 212.8
+     },
+     "heading": "CÓDIGO DE REFERÊNCIA",
+     "lines": 10,
+     "text": "import { supabaseServer } from \"@/lib/supabase-server\"; // app/(app)/dashboard/page.tsx\nexport default async function Dashboard({ searchParams }: Props) {\n  const { mes = \"2025-06\" } = await searchParams;\n  const db = await supabaseServer();\n  const { data } = await db.from(\"lancamentos\").select(\"tipo, valor\")\n    .gte(\"data_lancamento\", `${mes}-01`).lte(\"data_lancamento\", `${mes}-30`);\n  const soma = (t: string) />\n    (data /? []).filter((l) /> l.tipo //= t).reduce((a, l) /> a + Number(l.valor), 0);\n  return <Cards entradas={soma(\"entrada\")} saidas={soma(\"saida\")} mes={mes} />;\n}"
+    }
+   ]
+  },
+  {
+   "n": 88,
+   "title": "CHECK-POINT",
+   "img": "p088.webp",
+   "thumb": "p088-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 89,
+   "title": "DASHBOARD",
+   "img": "p089.webp",
+   "thumb": "p089-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 90,
+   "title": "Como uma pergunta de dinheiro vira um card?",
+   "img": "p090.webp",
+   "thumb": "p090-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 91,
+   "title": "A pergunta vira consulta",
+   "img": "p091.webp",
+   "thumb": "p091-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 282.8,
+      "w": 832.0,
+      "h": 112.0
+     },
+     "heading": null,
+     "lines": 5,
+     "text": "db.from(\"lancamentos\").select(\"valor\")\n  .eq(\"tipo\", \"saida\")\n  .eq(\"categoria_id\", 1)\n  .gte(\"data_lancamento\", \"2025-05-01\")\n  .lte(\"data_lancamento\", \"2025-05-31\")"
+    }
+   ]
+  },
+  {
+   "n": 92,
+   "title": "Somar no banco ou somar no código",
+   "img": "p092.webp",
+   "thumb": "p092-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 236.3,
+      "w": 397.5,
+      "h": 162.4
+     },
+     "heading": null,
+     "lines": 8,
+     "text": "// volta: só as linhas de maio\n.select(\"valor\")\n.eq(\"tipo\", \"saida\")\n.gte(\"data_lancamento\", \"2025-05-01\")\n.lte(\"data_lancamento\", \"2025-05-31\")\n\n// o código só soma o que voltou\nconst total = //."
+    },
+    {
+     "id": "b2",
+     "box": {
+      "x": 498.5,
+      "y": 236.3,
+      "w": 397.5,
+      "h": 179.2
+     },
+     "heading": null,
+     "lines": 2,
+     "text": "// volta: todas as linhas do período\n.select(\"tipo, valor, data_lancamento\")"
+    },
+    {
+     "id": "b3",
+     "box": {
+      "x": 498.5,
+      "y": 236.3,
+      "w": 397.5,
+      "h": 179.2
+     },
+     "heading": null,
+     "lines": 3,
+     "text": "// o código confere cada linha e soma\n// só as saídas de maio\nconst total = //."
+    }
+   ]
+  },
+  {
+   "n": 93,
+   "title": "Onde a conta do card “Saídas de maio” acontece?",
+   "img": "p093.webp",
+   "thumb": "p093-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 94,
+   "title": "Onde a conta do card “Saídas de maio” acontece?",
+   "img": "p094.webp",
+   "thumb": "p094-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 95,
+   "title": "Os cards de resumo",
+   "img": "p095.webp",
+   "thumb": "p095-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 291.2,
+      "w": 832.0,
+      "h": 145.6
+     },
+     "heading": null,
+     "lines": 7,
+     "text": "type CardProps = { titulo: string; valor: string };\n\nexport function CardResumo({ titulo, valor }: CardProps) {\n  return <div><p>{titulo}//p><strong>{valor}//strong>//div>;\n}\n\n<CardResumo titulo=\"Saídas\" valor=\"R$ 6.843,10\" />"
+    }
+   ]
+  },
+  {
+   "n": 96,
+   "title": "O número da tela bate com o do banco",
+   "img": "p096.webp",
+   "thumb": "p096-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 258.1,
+      "w": 832.0,
+      "h": 78.4
+     },
+     "heading": null,
+     "lines": 3,
+     "text": "SELECT SUM(valor) FROM lancamentos\nWHERE tipo = 'saida' AND user_id = 'id-da-claudia'\n  AND data_lancamento /= '2025-06-01' AND data_lancamento /= '2025-06-30';"
+    }
+   ]
+  },
+  {
+   "n": 97,
+   "title": "Real e data que a Cláudia entende",
+   "img": "p097.webp",
+   "thumb": "p097-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 266.9,
+      "w": 832.0,
+      "h": 95.2
+     },
+     "heading": null,
+     "lines": 4,
+     "text": "const real = (n: number) />\n  n.toLocaleString(\"pt-BR\", { style: \"currency\", currency: \"BRL\" });\nconst dia = (iso: string) />\n  new Date(iso).toLocaleDateString(\"pt-BR\", { timeZone: \"UTC\" });"
+    }
+   ]
+  },
+  {
+   "n": 98,
+   "title": "O período na URL",
+   "img": "p098.webp",
+   "thumb": "p098-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 99,
+   "title": "O gráfico, a única ilha do dashboard",
+   "img": "p099.webp",
+   "thumb": "p099-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 100,
+   "title": "Mudei o filtro e tirei o tipo",
+   "img": "p100.webp",
+   "thumb": "p100-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 159.3,
+      "w": 832.0,
+      "h": 95.2
+     },
+     "heading": null,
+     "lines": 4,
+     "text": "db.from(\"lancamentos\").select(\"valor\")\n  .gte(\"data_lancamento\", \"2025-06-01\")\n  .lte(\"data_lancamento\", \"2025-06-30\")\n// o .eq(\"tipo\", \"saida\") foi apagado"
+    }
+   ]
+  },
+  {
+   "n": 101,
+   "title": "Mudei o filtro e tirei o tipo",
+   "img": "p101.webp",
+   "thumb": "p101-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 159.3,
+      "w": 832.0,
+      "h": 95.2
+     },
+     "heading": null,
+     "lines": 4,
+     "text": "db.from(\"lancamentos\").select(\"valor\")\n  .gte(\"data_lancamento\", \"2025-06-01\")\n  .lte(\"data_lancamento\", \"2025-06-30\")\n// o .eq(\"tipo\", \"saida\") foi apagado"
+    }
+   ]
+  },
+  {
+   "n": 102,
+   "title": "CHECK-POINT",
+   "img": "p102.webp",
+   "thumb": "p102-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 103,
+   "title": "TIPOS COMO MAPA",
+   "img": "p103.webp",
+   "thumb": "p103-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 104,
+   "title": "A Cláudia pediu um campo novo. Quem te diz todos os lugares que isso atinge?",
+   "img": "p104.webp",
+   "thumb": "p104-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 105,
+   "title": "Onde mora o tipo do lançamento",
+   "img": "p105.webp",
+   "thumb": "p105-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 139.3,
+      "w": 832.0,
+      "h": 182.0
+     },
+     "heading": "LIB/TIPOS.TS",
+     "lines": 7,
+     "text": "type Lancamento = {\n  lancamento_id: number;\n  descricao: string;\n  valor: number;\n  tipo: string;\n  data_lancamento: string;\n};"
+    }
+   ]
+  },
+  {
+   "n": 106,
+   "title": "O erro vermelho é o roteiro",
+   "img": "p106.webp",
+   "thumb": "p106-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 107,
+   "title": "Seguir o tipo da consulta até a tela",
+   "img": "p107.webp",
+   "thumb": "p107-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 108,
+   "title": "any apaga o mapa",
+   "img": "p108.webp",
+   "thumb": "p108-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 172.8,
+      "w": 397.5,
+      "h": 61.6
+     },
+     "heading": null,
+     "lines": 2,
+     "text": "const lancamentos: Lancamento[] = dados;\nconst texto = lancamentos[0].obs;"
+    },
+    {
+     "id": "b2",
+     "box": {
+      "x": 498.5,
+      "y": 172.8,
+      "w": 397.5,
+      "h": 61.6
+     },
+     "heading": null,
+     "lines": 2,
+     "text": "const lancamentos: any = dados;\nconst texto = lancamentos[0].obs;"
+    }
+   ]
+  },
+  {
+   "n": 109,
+   "title": "Tipos gerados do banco",
+   "img": "p109.webp",
+   "thumb": "p109-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 139.3,
+      "w": 832.0,
+      "h": 208.6
+     },
+     "heading": "LIB/BANCO.TS (GERADO)",
+     "lines": 8,
+     "text": "lancamentos: {\n  Row: {\n    lancamento_id: number;\n    descricao: string;\n    valor: number;\n    tipo: string;\n    data_lancamento: string;\n  };"
+    },
+    {
+     "id": "b2",
+     "box": {
+      "x": 74.0,
+      "y": 338.1,
+      "w": 32.0,
+      "h": 33.6
+     },
+     "heading": null,
+     "lines": 1,
+     "text": "};"
+    }
+   ]
+  },
+  {
+   "n": 110,
+   "title": "Renomeamos descricao para titulo",
+   "img": "p110.webp",
+   "thumb": "p110-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 159.3,
+      "w": 402.0,
+      "h": 112.0
+     },
+     "heading": null,
+     "lines": 5,
+     "text": "./ lib/tipos.ts\ntype Lancamento = {\n  titulo: string; ./ era descricao\n  ...\n};"
+    },
+    {
+     "id": "b2",
+     "box": {
+      "x": 494.0,
+      "y": 159.3,
+      "w": 402.0,
+      "h": 112.0
+     },
+     "heading": null,
+     "lines": 5,
+     "text": "actions.ts · 2 erros\nlancamento-form.tsx · 1 erro\nfiltro.tsx · 2 erros\nlancamento-card.tsx · 1 erro\ndashboard/page.tsx · 1 erro"
+    }
+   ]
+  },
+  {
+   "n": 111,
+   "title": "Renomeamos descricao para titulo",
+   "img": "p111.webp",
+   "thumb": "p111-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 159.3,
+      "w": 402.0,
+      "h": 112.0
+     },
+     "heading": null,
+     "lines": 5,
+     "text": "./ lib/tipos.ts\ntype Lancamento = {\n  titulo: string; ./ era descricao\n  ...\n};"
+    },
+    {
+     "id": "b2",
+     "box": {
+      "x": 494.0,
+      "y": 159.3,
+      "w": 402.0,
+      "h": 112.0
+     },
+     "heading": null,
+     "lines": 5,
+     "text": "actions.ts · 2 erros\nlancamento-form.tsx · 1 erro\nfiltro.tsx · 2 erros\nlancamento-card.tsx · 1 erro\ndashboard/page.tsx · 1 erro"
+    }
+   ]
+  },
+  {
+   "n": 112,
+   "title": "CHECK-POINT",
+   "img": "p112.webp",
+   "thumb": "p112-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 113,
+   "title": "MODIFICAR SEM IA",
+   "img": "p113.webp",
+   "thumb": "p113-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 114,
+   "title": "IA desligada: você consegue mexer no app que ela escreveu?",
+   "img": "p114.webp",
+   "thumb": "p114-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 115,
+   "title": "Ler antes de escrever",
+   "img": "p115.webp",
+   "thumb": "p115-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 116,
+   "title": "Modificação 1: campo novo ponta a ponta",
+   "img": "p116.webp",
+   "thumb": "p116-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 117,
+   "title": "Modificação 2: filtrar pela URL",
+   "img": "p117.webp",
+   "thumb": "p117-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 181.0,
+      "w": 832.0,
+      "h": 187.1
+     },
+     "heading": "APP/(APP)/LANCAMENTOS/PAGE.TSX",
+     "lines": 7,
+     "text": "const db = await supabaseServer();\nconst { categoria } = await searchParams;\nconst { data } = await db.from(\"lancamentos\").select(\"*, categorias(nome)\");\nconst vistos = data!.filter(\n  (l) <> !categoria <| l.categorias<.nome <<= categoria\n);\nreturn <Lista lancamentos={vistos} <>;"
+    }
+   ]
+  },
+  {
+   "n": 118,
+   "title": "Modificação 3: mudar a ordenação",
+   "img": "p118.webp",
+   "thumb": "p118-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 249.0,
+      "w": 832.0,
+      "h": 64.4
+     },
+     "heading": null,
+     "lines": 2,
+     "text": "const lista = data!\n  .sort((a, b) <> b.valor - a.valor);"
+    }
+   ]
+  },
+  {
+   "n": 119,
+   "title": "Banco ou página: onde a ordem entra",
+   "img": "p119.webp",
+   "thumb": "p119-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 172.8,
+      "w": 397.5,
+      "h": 100.8
+     },
+     "heading": null,
+     "lines": 4,
+     "text": "const { data } = await db\n  .from(\"lancamentos\").select(\"*\")\n  .order(\"valor\", { ascending: false });\nconst lista = data!;"
+    },
+    {
+     "id": "b2",
+     "box": {
+      "x": 498.5,
+      "y": 172.8,
+      "w": 397.5,
+      "h": 100.8
+     },
+     "heading": null,
+     "lines": 4,
+     "text": "const { data } = await db\n  .from(\"lancamentos\").select(\"*\");\nconst lista = data!\n  <=.sort((a, b) <> b.valor - a.valor)<=;"
+    }
+   ]
+  },
+  {
+   "n": 120,
+   "title": "Modificações 4 e 5: mostrar conforme o dado",
+   "img": "p120.webp",
+   "thumb": "p120-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 172.8,
+      "w": 402.0,
+      "h": 137.2
+     },
+     "heading": null,
+     "lines": 6,
+     "text": "<li>\n  {dados.descricao}\n  {dados.valor > 1000 <& (\n    <span>acima de R$ 1.000</span>\n  )}\n</li>"
+    },
+    {
+     "id": "b2",
+     "box": {
+      "x": 494.0,
+      "y": 172.8,
+      "w": 402.0,
+      "h": 119.0
+     },
+     "heading": null,
+     "lines": 5,
+     "text": "{lancamentos.length > 0 ? (\n  <CardResultado valor={resultado} <>\n) : (\n  <p>Sem lançamento neste mês.</p>\n)}"
+    }
+   ]
+  },
+  {
+   "n": 121,
+   "title": "Um commit por modificação",
+   "img": "p121.webp",
+   "thumb": "p121-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 122,
+   "title": "Quando voltar a pedir à IA",
+   "img": "p122.webp",
+   "thumb": "p122-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 123,
+   "title": "Marcar lançamentos como 'previsto'",
+   "img": "p123.webp",
+   "thumb": "p123-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 159.3,
+      "w": 832.0,
+      "h": 61.6
+     },
+     "heading": null,
+     "lines": 2,
+     "text": "type Lancamento = { id: number; descricao: string;\n  valor: number; tipo: \"entrada\" | \"saida\" };"
+    }
+   ]
+  },
+  {
+   "n": 124,
+   "title": "Marcar lançamentos como 'previsto'",
+   "img": "p124.webp",
+   "thumb": "p124-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 159.3,
+      "w": 832.0,
+      "h": 61.6
+     },
+     "heading": null,
+     "lines": 2,
+     "text": "type Lancamento = { id: number; descricao: string;\n  valor: number; tipo: \"entrada\" | \"saida\" };"
+    }
+   ]
+  },
+  {
+   "n": 125,
+   "title": "CHECK-POINT",
+   "img": "p125.webp",
+   "thumb": "p125-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 126,
+   "title": "DEPLOY NA VERCEL",
+   "img": "p126.webp",
+   "thumb": "p126-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 127,
+   "title": "Funciona na sua máquina. E no celular da Cláudia?",
+   "img": "p127.webp",
+   "thumb": "p127-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 128,
+   "title": "Do GitHub para a Vercel",
+   "img": "p128.webp",
+   "thumb": "p128-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 129,
+   "title": "Mas o que é esse tal de build?",
+   "img": "p129.webp",
+   "thumb": "p129-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 130,
+   "title": "Do código ao app pronto: os passos do build",
+   "img": "p130.webp",
+   "thumb": "p130-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 131,
+   "title": "npm run dev e build: dois momentos, duas máquinas",
+   "img": "p131.webp",
+   "thumb": "p131-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 132,
+   "title": "Agora sim: Do GitHub para a Vercel",
+   "img": "p132.webp",
+   "thumb": "p132-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 133,
+   "title": "As variáveis em produção",
+   "img": "p133.webp",
+   "thumb": "p133-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 134,
+   "title": "Ler o log quando o build falha",
+   "img": "p134.webp",
+   "thumb": "p134-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 135,
+   "title": "Autorizar a URL no Supabase",
+   "img": "p135.webp",
+   "thumb": "p135-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 136,
+   "title": "Cada push publica",
+   "img": "p136.webp",
+   "thumb": "p136-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 137,
+   "title": "A prova final, no ar",
+   "img": "p137.webp",
+   "thumb": "p137-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 138,
+   "title": "No ar, o login devolve 'Invalid API key'",
+   "img": "p138.webp",
+   "thumb": "p138-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 159.3,
+      "w": 832.0,
+      "h": 117.6
+     },
+     "heading": "O QUE VOCÊ VÊ",
+     "lines": 4,
+     "text": "Build na Vercel ........ passou\nHome no ar ............. abre\nLogin no localhost ..... funciona\nLogin no ar ............ Invalid API key"
+    }
+   ]
+  },
+  {
+   "n": 139,
+   "title": "No ar, o login devolve 'Invalid API key'",
+   "img": "p139.webp",
+   "thumb": "p139-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 159.3,
+      "w": 832.0,
+      "h": 117.6
+     },
+     "heading": "O QUE VOCÊ VÊ",
+     "lines": 4,
+     "text": "Build na Vercel ........ passou\nHome no ar ............. abre\nLogin no localhost ..... funciona\nLogin no ar ............ Invalid API key"
+    }
+   ]
+  },
+  {
+   "n": 140,
+   "title": "Maior gasto do mês e período por 'de' e 'até'",
+   "img": "p140.webp",
+   "thumb": "p140-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 141,
+   "title": "A IA revisa o app que vai para a Cláudia",
+   "img": "p141.webp",
+   "thumb": "p141-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 64.0,
+      "y": 222.8,
+      "w": 832.0,
+      "h": 229.6
+     },
+     "heading": "PROMPT DE AVALIAÇÃO DA HARVE",
+     "lines": 10,
+     "text": "Você é revisor de código da Harve. Revise a minha solução para este requisito: A Cláudia\npediu um card 'maior gasto do mês' com descrição e data e quer escolher o período por 'de'\ne 'até' na URL; depois disso, publique a mudança e confira no ar.\nConfira, um por um, e aponte a linha:\n- o número da tela bate com o do banco\n- a agregação está onde o portão decidiu, e você sabe defender\n- cada modificação tem o seu commit, com mensagem clara\n- o app no ar funciona com dois usuários e com as variáveis de produção\nDepois, liste os casos que quebram a solução e uma melhoria por vez, com o porquê. Não\nreescreva a solução: eu corrijo."
+    },
+    {
+     "id": "b2",
+     "box": {
+      "x": 74.0,
+      "y": 444.1,
+      "w": 188.8,
+      "h": 31.8
+     },
+     "heading": null,
+     "lines": 1,
+     "text": "[cole aqui o seu código]"
+    }
+   ]
+  },
+  {
+   "n": 142,
+   "title": "O painel da professora de inglês",
+   "img": "p142.webp",
+   "thumb": "p142-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 143,
+   "title": "A Caderneta está no ar",
+   "img": "p143.webp",
+   "thumb": "p143-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 144,
+   "title": "CHECK-POINT",
+   "img": "p144.webp",
+   "thumb": "p144-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 145,
+   "title": "COMO INSTALAR",
+   "img": "p145.webp",
+   "thumb": "p145-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 146,
+   "title": "Windows 10 ou 11",
+   "img": "p146.webp",
+   "thumb": "p146-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 147,
+   "title": "macOS com chip Apple (M1, M2...)",
+   "img": "p147.webp",
+   "thumb": "p147-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 148,
+   "title": "macOS com chip Intel",
+   "img": "p148.webp",
+   "thumb": "p148-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 149,
+   "title": "Linux Ubuntu ou Debian",
+   "img": "p149.webp",
+   "thumb": "p149-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 150,
+   "title": "Outro Linux",
+   "img": "p150.webp",
+   "thumb": "p150-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 151,
+   "title": "Chromebook",
+   "img": "p151.webp",
+   "thumb": "p151-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 152,
+   "title": "Tablet ou celular",
+   "img": "p152.webp",
+   "thumb": "p152-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 153,
+   "title": "Windows 10 ou 11",
+   "img": "p153.webp",
+   "thumb": "p153-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 154,
+   "title": "macOS com chip Apple (M1, M2...)",
+   "img": "p154.webp",
+   "thumb": "p154-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 155,
+   "title": "macOS com chip Intel",
+   "img": "p155.webp",
+   "thumb": "p155-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 156,
+   "title": "Linux Ubuntu ou Debian",
+   "img": "p156.webp",
+   "thumb": "p156-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 157,
+   "title": "Outro Linux",
+   "img": "p157.webp",
+   "thumb": "p157-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 158,
+   "title": "Chromebook",
+   "img": "p158.webp",
+   "thumb": "p158-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 159,
+   "title": "Tablet ou celular",
+   "img": "p159.webp",
+   "thumb": "p159-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 160,
+   "title": "Windows 10 ou 11",
+   "img": "p160.webp",
+   "thumb": "p160-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 161,
+   "title": "macOS com chip Apple (M1, M2...)",
+   "img": "p161.webp",
+   "thumb": "p161-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 162,
+   "title": "macOS com chip Intel",
+   "img": "p162.webp",
+   "thumb": "p162-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 163,
+   "title": "Linux Ubuntu ou Debian",
+   "img": "p163.webp",
+   "thumb": "p163-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 56.0,
+      "y": 232.9,
+      "w": 163.2,
+      "h": 26.7
+     },
+     "heading": null,
+     "lines": 1,
+     "text": "    sudo apt-get update"
+    }
+   ]
+  },
+  {
+   "n": 164,
+   "title": "Outro Linux",
+   "img": "p164.webp",
+   "thumb": "p164-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 165,
+   "title": "Windows 10 ou 11",
+   "img": "p165.webp",
+   "thumb": "p165-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 166,
+   "title": "macOS com chip Apple (M1, M2...)",
+   "img": "p166.webp",
+   "thumb": "p166-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 167,
+   "title": "macOS com chip Intel",
+   "img": "p167.webp",
+   "thumb": "p167-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 168,
+   "title": "Linux Ubuntu ou Debian",
+   "img": "p168.webp",
+   "thumb": "p168-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 169,
+   "title": "Outro Linux",
+   "img": "p169.webp",
+   "thumb": "p169-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 170,
+   "title": "Chromebook",
+   "img": "p170.webp",
+   "thumb": "p170-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 171,
+   "title": "Tablet ou celular",
+   "img": "p171.webp",
+   "thumb": "p171-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 172,
+   "title": "Windows 10 ou 11",
+   "img": "p172.webp",
+   "thumb": "p172-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 173,
+   "title": "macOS com chip Apple (M1, M2...)",
+   "img": "p173.webp",
+   "thumb": "p173-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 174,
+   "title": "macOS com chip Intel",
+   "img": "p174.webp",
+   "thumb": "p174-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 175,
+   "title": "Linux Ubuntu ou Debian",
+   "img": "p175.webp",
+   "thumb": "p175-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 176,
+   "title": "Outro Linux",
+   "img": "p176.webp",
+   "thumb": "p176-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 177,
+   "title": "Chromebook",
+   "img": "p177.webp",
+   "thumb": "p177-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 178,
+   "title": "Tablet ou celular",
+   "img": "p178.webp",
+   "thumb": "p178-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 179,
+   "title": "Windows 10 ou 11",
+   "img": "p179.webp",
+   "thumb": "p179-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 180,
+   "title": "macOS com chip Apple (M1, M2...)",
+   "img": "p180.webp",
+   "thumb": "p180-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 181,
+   "title": "macOS com chip Intel",
+   "img": "p181.webp",
+   "thumb": "p181-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 182,
+   "title": "Linux Ubuntu ou Debian",
+   "img": "p182.webp",
+   "thumb": "p182-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 183,
+   "title": "Outro Linux",
+   "img": "p183.webp",
+   "thumb": "p183-t.webp",
+   "blocks": [
+    {
+     "id": "b1",
+     "box": {
+      "x": 56.0,
+      "y": 181.1,
+      "w": 137.6,
+      "h": 26.7
+     },
+     "heading": null,
+     "lines": 1,
+     "text": "    brew install gh"
+    },
+    {
+     "id": "b2",
+     "box": {
+      "x": 56.0,
+      "y": 216.1,
+      "w": 137.6,
+      "h": 26.7
+     },
+     "heading": null,
+     "lines": 1,
+     "text": "    brew upgrade gh"
+    }
+   ]
+  },
+  {
+   "n": 184,
+   "title": "Chromebook",
+   "img": "p184.webp",
+   "thumb": "p184-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 185,
+   "title": "Tablet ou celular",
+   "img": "p185.webp",
+   "thumb": "p185-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 186,
+   "title": "CHECK-POINT",
+   "img": "p186.webp",
+   "thumb": "p186-t.webp",
+   "blocks": []
+  },
+  {
+   "n": 187,
+   "title": "Slide 187",
+   "img": "p187.webp",
+   "thumb": "p187-t.webp",
+   "blocks": []
+  }
+ ]
+}

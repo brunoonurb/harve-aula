@@ -1,6 +1,7 @@
 'use client'
 
-import { CodeBlock, TOTAL, slideTitles, slides, stripPlaceholders } from '@/lib/deck'
+import { CodeBlock, stripPlaceholders } from '@/lib/deck-core'
+import { useDeckSource } from '@/components/DeckSourceContext'
 import { useCopy } from '@/lib/useCopy'
 import Thumb from '@/components/Thumb'
 
@@ -36,6 +37,7 @@ export default function PresenterPanel({
   onExpand: (b: CodeBlock) => void
 }) {
   const { copied, copy } = useCopy()
+  const { slides, titles: slideTitles, total: TOTAL } = useDeckSource()
   const next = current < TOTAL ? slides[current] : null // slides[] e 0-based: current+1
 
   return (
