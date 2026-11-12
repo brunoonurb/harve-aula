@@ -857,3 +857,31 @@ mark.ph-lg {
   border-color: #d93600;
   color: #fff;
 }
+
+/* Slide dedicado a downloads (deck /agentes): botoes grandes, com quebra de linha */
+.dl-group-lg {
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.dl-group-lg .dl-btn {
+  gap: 8px;
+  padding: 11px 20px;
+  border-color: #1f6e5a;
+  color: #1f6e5a;
+  font-size: 14px;
+}
+
+.dl-group-lg .dl-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+.dl-group-lg .dl-btn:hover,
+.dl-group-lg .dl-btn:focus-visible {
+  background: #1f6e5a;
+  color: #fff;
+  box-shadow: 0 1px 4px rgba(31, 110, 90, 0.35);
+}

@@ -237,7 +237,12 @@ export type SlideDownload = {
   primary?: boolean
 }
 
-export type SlideDownloadGroup = { box: Box; items: SlideDownload[] }
+export type SlideDownloadGroup = {
+  box: Box
+  items: SlideDownload[]
+  /** botoes grandes que quebram linha (slide dedicado a downloads) */
+  large?: boolean
+}
 
 /* ------------------------------------------------------------------ *
  * Fonte de dados do deck

@@ -10,7 +10,7 @@ import { SlideDownloadGroup } from '@/lib/deck-core'
 export default function SlideDownloads({ group }: { group: SlideDownloadGroup }) {
   return (
     <div
-      className="dl-group"
+      className={`dl-group${group.large ? ' dl-group-lg' : ''}`}
       style={{
         position: 'absolute',
         left: group.box.x,
