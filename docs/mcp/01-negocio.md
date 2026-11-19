@@ -45,13 +45,16 @@ A senha das duas personas é `senha123`, só para demonstração.
 | GET `/api/carrinho` | cliente | Sem carrinho, retorna itens vazios e total 0 |
 | POST `/api/carrinho/itens` | cliente | Adicionar 2 canecas leva ao total correto; quantidade acima do estoque recebe 422; o lojista recebe 403 |
 
-## Roteiro (~45 slides)
+### Critério de aceite global
+Dado o sistema pronto, quando o MCP do Supabase é desligado (`/mcp` › supabase › Disable) e o roteiro de testes do qa roda só com `curl`, então todos os casos passam (inclusive 401, 403, 404 e 422). O sistema não depende do MCP em tempo de execução.
+
+## Roteiro (~47 slides; o deck tem 47)
 1. **Abertura**: capa, pergunta provocativa, o que vamos construir.
-2. **Parte 1, MCP** (~10): o que é, cliente/servidor, tools/resources/prompts, transportes, `claude mcp add`, escopos, `.mcp.json`, MCPs úteis (Supabase somente leitura, Playwright, Context7), segurança e check-point.
+2. **Parte 1, MCP** (~10): o que é, cliente/servidor, tools/resources/prompts, transportes, `claude mcp add`, escopos, `.mcp.json`, MCPs úteis (Supabase com escrita no projeto de estudo, Playwright, Context7), segurança e check-point.
 3. **Parte 2, o time**: diagrama, prompt único em 2 slides (1/2 e 2/2), conferência e techlead fixo, downloads e check-point.
-4. **Parte 3, banco via /api**: por que /api, modelo, SQL em blocos, migração, seed, `.env.local`, `/api/health`, curl e check-point.
+4. **Parte 3, banco via /api**: por que /api, modelo, o que o banco garante, segurança e seed (só explicação, sem SQL nos slides), prompt em que o dba cria a migração e o seed pelo MCP (o aluno só informa o `project_ref` e aprova), conferência pelo MCP, `.env.local` (o aluno cola só a `service_role`), `/api/health`, curl e check-point.
 5. **Parte 4, a Lojinha**: regras, login, criar produto, listar e atualizar, carrinho (cada etapa com prompt e curl), QA e check-point.
-6. **Fechamento**: erros comuns, próximos passos, downloads e check-point final.
+6. **Fechamento**: o sistema roda sem o MCP (bullets e prova sem MCP), erros comuns, próximos passos, downloads e check-point final.
 
 ## Fora do escopo
 Checkout, pagamento, baixa de estoque, pedidos, upload de imagem, categorias, busca, paginação, cadastro público, recuperação de senha, deploy do projeto do aluno, telas (só curl) e Server Actions.

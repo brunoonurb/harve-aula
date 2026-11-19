@@ -28,7 +28,7 @@ Endpoints: `GET /api/health`, `POST /api/auth/login`, `POST /api/auth/logout`, `
 - **Permissão por papel**: Carlos não cria nem edita produto; Marina não usa carrinho; Carlos não vê carrinho alheio; lojista só altera produto dele (um segundo lojista, se existir).
 - **Estoque**: produto esgotado não entra no carrinho; quantidade acima do estoque dá 422; repetir produto soma sem passar do estoque; adicionar não baixa o estoque (RN10); o item mantém o preço da primeira adição (RN09).
 - **RN11**: tente enviar `user_id`, `lojista_id` ou `papel` no corpo e confirme que são ignorados.
-- Confira o estado do banco só pelo MCP do Supabase em leitura, ou pela API.
+- Confira o estado do banco pelo MCP do Supabase (só consultas, sem gravar), ou pela API.
 
 ## O que NÃO faz
 

@@ -458,7 +458,7 @@ from public.itens_carrinho i join public.produtos p on p.id = i.produto_id;
 - Exclusão: sem soft delete genérico. `produtos.ativo` faz o papel de "arquivar" e preserva o histórico dos itens (a FK impede apagar produto que está em carrinho).
 - Backup: o Supabase faz backups diários nos planos pagos; no plano gratuito, o aluno pode usar `pg_dump` se quiser guardar. Não é tema da aula.
 - Multitenancy: não há. Cada lojista isola seus produtos por `lojista_id`, aplicado na rota.
-- Migração: o arquivo único `supabase/migrations/0001_lojinha.sql` (blocos 1 a 8c, mais seed em `seed.sql`). Rodado no SQL Editor ou pelo MCP do Supabase (`apply_migration`). Não há reexecução idempotente do conjunto inteiro: se errar, apagar com `drop table ... cascade` e rodar de novo.
+- Migração: o arquivo único `supabase/migrations/0001_lojinha.sql` (blocos 1 a 8c, mais seed em `seed.sql`). Aplicada pelo dba via MCP do Supabase (`apply_migration`, seed com `execute_sql`), depois do ok do usuário; plano B: SQL Editor. Não há reexecução idempotente do conjunto inteiro: se errar, apagar com `drop table ... cascade` e rodar de novo.
 
 ## 12. Riscos e cuidados
 

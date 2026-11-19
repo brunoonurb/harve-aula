@@ -150,10 +150,10 @@ Notas: usar `-i` só no login (mostra `Set-Cookie ... HttpOnly`). Carlos usa out
 Prompts do techlead devem sempre dizer: "Leia `node_modules/next/dist/docs/` (Route Handlers, `cookies`) antes de escrever; `cookies()` e `params` são assíncronos; apenas `app/api/**/route.ts`; nenhuma Server Action; `SUPABASE_SERVICE_ROLE_KEY` só no servidor."
 
 Fatos de MCP para os slides (confirmar na doc oficial no dia da implementação, pois mudam rápido; hoje 2026-11):
-- `claude mcp add --transport http <nome> <url>`; `claude mcp list`; `/mcp` dentro da sessão; escopos `--scope local` (padrão, só você neste projeto), `project` (grava `.mcp.json`, vai ao git), `user` (todos os projetos).
-- `.mcp.json` aceita `${VAR}` e `${VAR:-padrao}` em `url`, `headers`, `env`; segredo vem do ambiente, nunca literal no arquivo versionado.
-- Supabase MCP com `?read_only=true&project_ref=<ref>`; Playwright via stdio (`npx @playwright/mcp@latest`); Context7 por HTTP.
-- Slide de segurança: somente leitura, escopo por projeto, não apontar para produção, token fora do git, aprovar chamadas.
+- Na aula o aluno não roda `claude mcp add`: pede ao Claude no chat para criar o `.mcp.json` (escopo project, URL com `project_ref` literal), reabre a sessão (`/resume` para continuar), aprova o arquivo e faz `/mcp` › supabase › Authenticate (ADR-09). Referência equivalente em terminal: `claude mcp add --transport http <nome> <url>`; `claude mcp list`; `/mcp` dentro da sessão; escopos `--scope local` (padrão, só você neste projeto), `project` (grava `.mcp.json`, vai ao git), `user` (todos os projetos).
+- O `project_ref` não é segredo e vai literal na URL; segredo vai em `${VAR}`. `.mcp.json` aceita `${VAR}` e `${VAR:-padrao}` em `url`, `headers`, `env`; segredo vem do ambiente, nunca literal no arquivo versionado.
+- Supabase MCP com `?project_ref=<ref>` (sem `read_only`: o dba aplica a migração; em projeto real, acrescentar `&read_only=true`); Playwright via stdio (`npx @playwright/mcp@latest`); Context7 por HTTP.
+- Slide de segurança: `project_ref` fixo (um projeto de estudo), não apontar para produção, token fora do git, aprovar cada chamada e ler o SQL antes do `apply_migration`; em projeto real, `read_only=true`.
 
 ## 5. Etapas de implementação
 
@@ -165,7 +165,7 @@ Fatos de MCP para os slides (confirmar na doc oficial no dia da implementação,
 | E3 | Casca `/mcp` com 3 slides de teste | `app/mcp/*`, `McpDeck.tsx`, `mcp-deck.ts`, `mcp-content.ts` mínimo | build gera `/mcp` e `/mcp/slide/1..3`; slide 4 dá 404 |
 | E4 | Parte 1 (~10 slides) + check-point | `mcp-content.ts` | todos os comandos revisados na doc oficial; sem estouro de texto (screenshot de cada slide) |
 | E5 | Parte 2 (agentes): 2 prompts, team, downloads + 7 `.md` | `mcp-content.ts`, `public/mcp-kit/*` | prompts ~1100 caracteres cada e fonte >= 9pt; 7 botões de download baixam; os `.md` batem com o prompt |
-| E6 | Parte 3 (banco): SQL em blocos, migração, seed, `.env.local`, health, curl | `mcp-content.ts` | SQL idêntico ao de `03-dados.md` (copiar, não reescrever); blocos copiáveis com Copiar |
+| E6 | Parte 3 (banco): slides de explicação (garantias, segurança e seed), prompt do dba que aplica a migração pelo MCP, conferência, `.env.local`, health, curl | `mcp-content.ts` | os slides não têm SQL; o prompt do dba bate com `03-dados.md` (a fonte do SQL) |
 | E7 | Parte 4 (login, criar, listar/atualizar, carrinho): prompt + curl por etapa | `mcp-content.ts` | snippets da seção 4 usados sem desvios; curls da ordem login -> produtos -> carrinho coerentes |
 | E8 | Validação ponta a ponta do roteiro | projeto-piloto em scratchpad (não vai ao repo) | seguir os prompts em um projeto Next novo + Supabase de teste; todos os curls retornam o esperado (200/401/403/404/422) |
 | E9 | Fechamento | `CLAUDE.md`, README se citar decks | `npm run build` gera `/mcp/slide/1..N` (N ~ 45) e `/agentes/slide/1..38`; `git status` sem arquivos soltos em `public/` |
@@ -184,7 +184,7 @@ Orçamento de slides: P1 = 10 (+ capa e secção no início, total ~12), P2 = ~8
 - **Regressão em `/agentes`**: coberta por snapshot (E0/E1/E2).
 - **Tipagem do alunos com `RouteContext`**: não depende de typegen se usarem a assinatura explícita (adotada).
 - **Linha de `GET /api/health` ser prerenderizada no build**: se não acessar request nem rede, pode ser estática. Como consulta o banco, o handler deve fazer a consulta dentro do `GET` e o E8 confere em `next build` que aparece como dinâmica (`ƒ`).
-- **Preview em sala**: 45 slides com `preload: 'all'` é leve (sem imagens), sem problema.
+- **Preview em sala**: 47 slides com `preload: 'all'` é leve (sem imagens), sem problema.
 
 ## Discordâncias e observações sobre a arquitetura
 
